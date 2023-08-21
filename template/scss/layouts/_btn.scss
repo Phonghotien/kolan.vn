@@ -1,0 +1,130 @@
+.btn {
+  @include mid-flex;
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 4.4rem;
+  @include transition(0.5s, ease);
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  gap: 2.4rem;
+  color: white;
+  > * {
+    position: relative;
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+  }
+  .text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-text;
+  }
+  .icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    @include mid-flex;
+    color: $color-pri;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 3.4rem;
+      height: 3.4rem;
+      border-radius: 50%;
+      border: 0.1rem solid $color-pri;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+      left: 50%;
+      transition-delay: 0.3s;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: $color-pri;
+    transition: all 0.45s ease-in-out;
+    z-index: 1;
+  }
+
+  @include hover {
+    gap: 1rem;
+    .text,
+    .icon {
+      color: $color-third;
+      &::before {
+        opacity: 0;
+      }
+    }
+
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+  &.bg-pri {
+    background: $color-pri;
+    gap: 1rem;
+    .icon,
+    .text {
+      color: $color-third;
+      &::before {
+        display: none;
+      }
+    }
+    @include hover {
+      .text,
+      .icon {
+        color: $color-pri;
+      }
+      &::after {
+        background: $color-third;
+      }
+    }
+  }
+  &.btn-trans {
+    border: 0.1rem solid $color-pri;
+  }
+}
+.btnc {
+  width: 3.4rem;
+  height: 3.4rem;
+  @include mid-flex;
+  background: $color-pri;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  @include hover {
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: $color-second;
+    transition: all 0.45s ease-in-out;
+    z-index: 1;
+  }
+  .icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    @include mid-flex;
+    color: #fff;
+  }
+}

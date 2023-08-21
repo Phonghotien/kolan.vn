@@ -1,0 +1,23 @@
+.header {
+    height: var(--size-hd);
+    border-bottom: 1px solid $color-border-01;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    z-index: 50;
+    background-color: $color-pri;
+
+    &.sticky {}
+
+    .custom-logo-link {
+        display: flex;
+        @include transitionRe;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
