@@ -27,27 +27,30 @@ img {
 .mb-100 {
     margin-bottom: 10rem;
 }
+.pt-30 {
+    padding-top:3rem;
+}
+.sec-py {
+    padding: 10rem 0;
+
+    @include max(768px) {
+        padding: 4rem 0;
+    }
+}
 
 // end general css
-
+.breadcrumb {
+    .current {
+        color: $color-second;
+    }
+}
 
 .blog {
     position: relative;
-    padding-top:3rem;
-    &-breadcrumb {
-        &-first {
-            @include font-pri;
-        }
-        &-second {
-            @include font-pri;
-            color: $color-pri;
 
-        }
-    }
     &-title {
         color:$color-text;
         transition: all 0.3s ease-in-out;
-        @include font-pri;
         display: block;
 
         &:hover {
@@ -64,7 +67,6 @@ img {
         }
     }
     &-time {
-        @include font-pri;
         color:$color-text;
 
     }
@@ -146,7 +148,7 @@ img {
             margin-bottom: 3rem;
         }
         @include max(600px) {
-            width:100%;
+            width:100%; 
         }
     }
 
@@ -164,7 +166,7 @@ img {
     }
 
     &-flex {
-        margin: 0 -1rem;
+        margin: 0 -1.2rem;
         @include max(1024px) {
            margin: 0;
         }
@@ -176,7 +178,7 @@ img {
         transition: 0.3s ease-in-out;
     }
     &-right {
-        padding: 1rem;
+        padding: 1.2rem;
         width: 50%;
 
         @include max(1024px) {
@@ -227,7 +229,7 @@ img {
         right: 0;
         top: 0;
         bottom: 0;
-        padding: 0 1rem;
+        padding: 0 1.2rem;
         width: 50%;
         opacity: 0;
         pointer-events: none;
@@ -283,7 +285,6 @@ img {
 
 
         &-item {
-            @include font-pri;
             color: $color-text;
             transition: all 0.3s ease;
             position: relative;
