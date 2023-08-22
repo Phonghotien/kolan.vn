@@ -1,0 +1,327 @@
+//general css
+.d-block {
+    display: block;
+}
+.d-flex {
+    display: flex;
+}
+.d-none {
+    display: none;
+}
+.btnc {
+    cursor: pointer;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.mt-50 {
+    margin-top: 5rem;
+}
+.mt-15 {
+    margin-top:1.5rem;
+}
+.mb-15 {
+    margin-bottom:1.5rem;
+}
+.mb-100 {
+    margin-bottom: 10rem;
+}
+
+// end general css
+
+
+.blog {
+    position: relative;
+    padding-top:3rem;
+    &-breadcrumb {
+        &-first {
+            @include font-pri;
+        }
+        &-second {
+            @include font-pri;
+            color: $color-pri;
+
+        }
+    }
+    &-title {
+        color:$color-text;
+        transition: all 0.3s ease-in-out;
+        @include font-pri;
+        display: block;
+
+        &:hover {
+            color:$color-pri;
+        }
+
+        @include max(1200px) {
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2; /* Số dòng hiển thị */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+    }
+    &-time {
+        @include font-pri;
+        color:$color-text;
+
+    }
+    &-list {
+        display: flex;
+        margin: 0 -1.2rem;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        row-gap: 2.4rem;
+    }
+    &-item {
+        width: calc(100% / 3);
+        padding: 0 1.2rem;
+
+        @include max(1024px) {
+            width: 50%;
+        }
+        @include max(500px) {
+            width:100%;
+        }
+    }
+    &-img {
+        height: 33rem;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+
+        @include max(768px) {
+            height:25rem;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+
+        img {
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
+
+        }
+    }   
+    &-post {
+        position: relative;
+    }
+    &-decor {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        z-index: -1;
+
+        &.top {
+            top: 2%;
+            right: 0;
+            left: auto;
+
+            @include max (1440px) {
+                width:43%;
+            }
+        }
+    }
+}
+.fblog {
+    &-ctn {
+        margin-top: 5rem;
+        position: relative;
+        min-height: 50rem;
+    }
+    &-list {
+
+    }
+
+    &-item {
+        @include  max(1024px) {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+        @include max(600px) {
+            width:100%;
+        }
+    }
+
+    &-link {
+        display: block;
+
+        &:hover +  .fblog-icon{
+            opacity: 1;
+        }
+    }
+
+    &-icon {
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+    }
+
+    &-flex {
+        margin: 0 -1rem;
+        @include max(1024px) {
+           margin: 0;
+        }
+    }
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        transition: 0.3s ease-in-out;
+    }
+    &-right {
+        padding: 1rem;
+        width: 50%;
+
+        @include max(1024px) {
+            width: 100%;
+            padding: 0;
+
+            .t-title {
+                text-align: center;
+            }
+        }
+    }
+    &-gr {
+        position: relative;
+        padding: 2rem 0;
+
+        @include  max(1024px) {
+            padding: 1rem 0;
+
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height:0.1rem;
+            width:100%;
+            background-color:$color-second;
+
+        @include max(1024px) {
+            display: none;
+        }
+        }
+    }
+    &-icon {
+        position: absolute;
+        right: -3.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        @include max(1024px) {
+            display: none;
+        }
+    }
+    &-img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 0 1rem;
+        width: 50%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s ease-in-out;
+
+        @include max(1024px) {
+            position: relative;
+            width: 100%;
+            padding: 0;
+            opacity: 1;
+        }
+
+        &.show {
+            opacity: 1;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+}
+
+.btab {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+
+        @include min(1440px) {
+            justify-content: center;
+            column-gap: 7rem;
+        }
+
+        @include max(1440px) {
+        }
+        @include max(768px) {
+            width: 100%;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            height: 0.1rem;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background-color: $color-second;
+        }
+
+
+
+        &-item {
+            @include font-pri;
+            color: $color-text;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 1.5rem;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &:hover {
+                color: $color-pri;
+            }
+
+            &.active {
+                font-weight:700;
+                color: $color-pri;
+
+                .icon {
+                    opacity: 1;
+                }
+            }
+
+            .icon {
+                width: 2rem;
+                height: auto;
+                position: absolute;
+                left: 50%;
+                transform:translateX(-50%);
+                bottom: -1rem;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    .btabPanel {
+        display: none;
+    }
+
+    .btabPanel:first-child() {
+        display: block;
+    }
+}
