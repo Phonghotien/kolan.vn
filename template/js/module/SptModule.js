@@ -84,4 +84,23 @@ export default function SptModule() {
       prevEl: ".swiper-reproduct-prev",
     },
   });
+
+  // js for show pass word in profile form
+  $(".show-password").click(function() {
+    // console.log("show pass");
+    const pwd = $(this).siblings("input");
+    if (pwd.attr("type") == "password") {
+      pwd.attr("type", "text");
+      // console.log("show");
+      // $(this).parent().addClass("show");
+      $(this).removeClass("fa-eye-slash");
+      $(this).addClass("fa-eye");
+    } else {
+      pwd.attr("type", "password");
+      $(this).addClass("fa-eye-slash");
+      $(this).removeClass("fa-eye");
+    }
+  });
+
+
 }
