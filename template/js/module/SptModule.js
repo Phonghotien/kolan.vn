@@ -21,6 +21,7 @@ export default function SptModule() {
       }
     );
   });
+
   //js for page pdp
   //thumb
   var tswiper = new Swiper(".tmySwiper", {
@@ -48,7 +49,7 @@ export default function SptModule() {
 
     breakpoints: {
       768: {
-         slidesPerView: "auto",
+        slidesPerView: "auto",
         direction: "vertical",
       },
     },
@@ -64,19 +65,17 @@ export default function SptModule() {
     },
   });
 
-
-
   //js swiper product cart
   var swiperreproduct = new Swiper(".reproductswiper", {
     slidesPerView: 1,
     spaceBetween: 24,
     breakpoints: {
       650: {
-         slidesPerView: 2,
+        slidesPerView: 2,
       },
       1024: {
         slidesPerView: 3,
-     },
+      },
     },
 
     navigation: {
@@ -86,7 +85,7 @@ export default function SptModule() {
   });
 
   // js for show pass word in profile form
-  $(".show-password").click(function() {
+  $(".show-password").click(function () {
     // console.log("show pass");
     const pwd = $(this).siblings("input");
     if (pwd.attr("type") == "password") {
@@ -102,5 +101,40 @@ export default function SptModule() {
     }
   });
 
+  //js for select all product in cart
+  $(document).ready(function () {
+    const selectAllCheckbox = document.getElementById("selectAllPro");
+    const otherCheckboxes = document.querySelectorAll(
+      '.cartod tbody input[type="checkbox"]'
+    );
+    const chooseProContainers = document.querySelectorAll(
+      ".cartod .choose-pro"
+    );
 
+    selectAllCheckbox.addEventListener("change", function () {
+      const isChecked = selectAllCheckbox.checked;
+
+      otherCheckboxes.forEach(function (checkbox) {
+        checkbox.checked = isChecked;
+        updateChooseProClass(checkbox);
+      });
+    });
+
+    otherCheckboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", function () {
+        updateChooseProClass(checkbox);
+      });
+    });
+
+    function updateChooseProClass(checkbox) {
+      const chooseProContainer = checkbox.closest(".choose-pro");
+      if (checkbox.checked) {
+        chooseProContainer.classList.add("active");
+      } else {
+        chooseProContainer.classList.remove("active");
+      }
+    }
+  });
+
+  
 }
