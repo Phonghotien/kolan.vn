@@ -29,6 +29,9 @@
 .btnc {
   cursor: pointer;
 }
+.btn.trans{
+  border: 0.1rem solid $color-pri;
+}
 img {
   width: 100%;
   height: 100%;
@@ -243,7 +246,7 @@ img {
       margin: 0 auto;
       margin-bottom: 3rem;
     }
-    @include max(600px) {
+    @include max(650px) {
       width: 100%;
     }
 
@@ -744,6 +747,10 @@ img {
   min-width: 12.6rem;
   width: fit-content;
   margin: 0 auto;
+
+  @include max(768px) {
+    margin: unset;
+  }
   &.t-cxn {
     background: #fff2d6;
     color: #f6af15;
@@ -786,6 +793,10 @@ img {
     }
     &::placeholder {
       color: #c9c9c9;
+    }
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0.5;
+      cursor: pointer;
     }
   }
   textarea {
@@ -883,7 +894,7 @@ img {
     @include max(1200px) {
         margin: 0 -1.2rem;
     }
-    @include max(600px) {
+    @include max(650px) {
         flex-direction:  column;
     }
   }
@@ -895,7 +906,7 @@ img {
         padding: 0 1.2rem;
         width: 26rem;
     }
-    @include max(600px) {
+    @include max(650px) {
         width: 100%;
     }
   }
@@ -905,9 +916,13 @@ img {
 
     @include max(1200px) {
         padding: 0 1.2rem;
-        width: auto;
+        width: calc(100% - 26rem);
         flex: 1;
     }
+    @include max(650px) {
+      width: 100%
+  
+  }
   }
   &-head {
     &-gr {
@@ -1023,7 +1038,7 @@ img {
   &-info {
     position: relative;
 
-    @include max(600px) {
+    @include max(650px) {
         margin-top:2.4rem
     }
 
@@ -1212,12 +1227,38 @@ img {
               }
             }
           }
+          @include max(768px) {
+            display: none;
+          }
         }
         tbody {
           tr {
+            @include max(768px){
+              &:not(:last-child){
+                border-bottom: 0.1rem solid #efefef;
+              }
+            }
             td {
               padding: 2.3rem 0;
               color: $color-text;
+              
+              @include max(768px) {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 1.6rem 0;
+                position: relative;
+
+                &::before{
+                  content: attr(data-text);
+                  width: fit-content;
+                  font-weight: 600;
+                  font-size: 1.6rem;
+                  color: #031230;
+                  text-align: left;
+                  white-space: nowrap;
+                }
+              }
               &:not(:first-child) {
                 text-align: center;
               }
@@ -1256,9 +1297,23 @@ img {
       @include flex;
       margin: 0 2.5rem;
       margin-top: 3rem;
+
+      @include max(1024px) {
+        margin: 0 1rem;
+        margin-top:2.4rem ;
+      }
+
+      @include max(768px) {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+      }
     }
     &-step {
       width: calc((100% / 4));
+
+      @include max(768px){
+        width: 50%;
+      }
       &:not(:last-child) {
         .pfcus-odt-icon {
           //   &::after {
@@ -1284,6 +1339,10 @@ img {
             height: 100%;
             width: 50%;
             border-radius: 5rem;
+
+            @include max(1024px){
+              width: 70%;
+            }
           }
           &:before {
             border-radius: 5rem;
@@ -1303,6 +1362,9 @@ img {
             width: 50%;
             border-radius: 5rem;
             background-color: rgb(235, 232, 232);
+            @include max(1024px){
+              width: 70%;
+            }
           }
           &:before {
             border-top-right-radius: 5rem;
@@ -1331,6 +1393,9 @@ img {
       flex-direction: column;
       gap: 2rem;
       margin: 0 -2.5rem;
+      @include max(1024px) {
+        margin: 0 -1rem;
+      }
       &.step-pass {
         .pfcus-odt-icon {
           background: transparent;
@@ -1382,6 +1447,11 @@ img {
     &-text {
       @include mid-flex;
       flex-direction: column;
+
+      @include max(1024px) {
+        padding: 0 2rem;
+        text-align: center;
+      }
       .text {
         font-weight: 600;
         color: #444545;
@@ -1394,15 +1464,27 @@ img {
     &-flex {
       @include flex;
       margin: 0 -1.5rem;
+
+      @include max(900px) {
+        flex-direction: column;
+        row-gap: 2.4rem;
+      }
     }
     &-left {
       padding: 0 1.5rem;
       width: 52%;
+      @include max(900px) {
+        width: 100%;
+      }
     }
     &-right {
       padding: 0 1.5rem;
       width: 48%;
       margin-top: 2rem;
+      @include max(900px) {
+        width: 100%;
+        margin-top: 0;
+      }
     }
     &-if {
       margin-top: 3rem;
@@ -1415,6 +1497,7 @@ img {
         @include flex;
         align-items: center;
         gap: 1rem;
+        flex-wrap: wrap;
         .bx-status {
           margin: unset;
         }
@@ -1502,6 +1585,7 @@ img {
 
 .sec-pfcus {
   position: relative;
+  overflow: hidden;
   &-decor {
     position: absolute;
     z-index: 0;
@@ -1516,3 +1600,4 @@ img {
     }
   }
 }
+
