@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/backdoor.css" />
+    <link rel="icon" type="image/png" href="./assets/images/mona.png" />
+    <title>Chi tiết đơn hàng</title>
+    <link rel="stylesheet" href="./js/library/aos/aos.css" />
+    <link ref="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <div class="menu-nav">
+          <!-- Cấu trúc html menu -->
+          <ul class="menu-list">
+            <li class="menu-item current-menu-item">
+              <a href="" class="menu-link"> Demo </a>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="" class="menu-link"> Demo </a>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a href="" class="menu-link"> Demo </a>
+                </li>
+                <li class="menu-item dropdown">
+                  <a href="" class="menu-link"> Demo </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+        
+        <div class="sec-cstep">
+            <div class="container">
+                <div class="cstep">
+                    <div class="cstep-odt-steps mt-30">
+
+                        <div class="cstep-odt-step step-pass">
+                            <div class="cstep-odt-box ">
+                                <div class="cstep-odt-icon">
+                                    <span class="icon">
+                                        <img src="./assets/images/spt-img/Sent.png" alt="">
+                                    </span>
+                                    <span class="t16 fw-7 text">Tạo tài khoản</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="cstep-odt-step step-pass">
+                            <div class="cstep-odt-box ">
+                                <div class="cstep-odt-icon">
+                                    <span class="icon">
+                                        <img src="./assets/images/spt-img/Credit card.png" alt="">
+                                    </span>
+                                    <span class="t16 fw-7 text">Đặt hàng</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cstep-odt-step active">
+                            <div class="cstep-odt-box ">
+                                <div class="cstep-odt-icon">
+                                    <span class="icon">
+                                        <img src="./assets/images/spt-img/Credit card.png" alt="">
+                                    </span>
+                                    <span class="t16 fw-7 text">Thanh toán</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cstep-odt-step">
+                            <div class="cstep-odt-box">
+                                <div class="cstep-odt-icon">
+                                    <span class="icon">
+                                        <img src="./assets/images/spt-img/Credit card.png" alt="">
+                                    </span>
+                                    <span class="t16 fw-7 text">Xác nhận đơn</span>
+
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        <div class="cstep-odt-step">
+                            <div class="cstep-odt-box">
+                                <div class="cstep-odt-icon">
+                                    <span class="icon">
+                                        <img src="./assets/images/spt-img/Credit card.png" alt="">
+                                    </span>
+                                    <span class="t16 fw-7 text">Thanh toán</span>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sec-cartod sec-py">
+            <div class="container">
+                <div class="cartod">
+                    <div class="cartod-wrap">
+                        <div class="cartod-top">
+                            <div class="cartod-head">
+                                <p class="t-title">
+                                    Thanh toán
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cartod-block mt-50">
+                            <div class="cartod-flex">
+                                <div class="cartod-left pay">
+                                    <div class="cartod-form">
+                                        <form action="">
+                                            <div class="cartod-form-if">
+                                                <p class="t24 fw-7 mb-20">Địa chỉ giao hàng</p>
+                                                <div class="cartod-form-gr">
+                                                    <div class="ip-control">
+                                                        <label for="" class="t-label">
+                                                            Họ và tên <span class="c-third">*</span>
+                                                        </label>
+                                                        <input type="text" placeholder="Họ và tên">
+                                                    </div>
+                                                    <div class="ip-control x2">
+                                                        <label for="" class="t-label">
+                                                            Số điện thoại<span class="c-third">*</span>
+                                                        </label>
+                                                        <input type="text" placeholder="Số điện thoại của bạn">
+                                                    </div>
+                                                    <div class="ip-control x2">
+                                                        <label for="" class="t-label">
+                                                            Email<span class="c-third">*</span>
+                                                        </label>
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="ip-control x2">
+                                                        <label for="" class="t-label">
+                                                            Tỉnh/thành phố<span class="c-third">*</span>
+                                                        </label>
+                                                        <div class="cartod-select">
+                                                            <select class="re-select-main" name="state">
+                                                                <option selected disabled value="">Chọn tỉnh/thành phố
+                                                                </option>
+                                                                <option value="AL">Alabama</option>
+                                                                <option value="WY">Wyoming</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ip-control x2">
+                                                        <label for="" class="t-label">
+                                                            Quận/huyện<span class="c-third">*</span>
+                                                        </label>
+                                                        <div class="cartod-select">
+                                                            <select class="re-select-main" name="state">
+                                                                <option selected disabled value=""> Quận/huyện</option>
+                                                                <option value="AL">Alabama</option>
+                                                                <option value="WY">Wyoming</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ip-control x2">
+                                                        <label for="" class="t-label">
+                                                            Phường/xã<span class="c-third">*</span>
+                                                        </label>
+                                                        <div class="cartod-select">
+                                                            <select class="re-select-main" name="state">
+                                                                <option selected disabled value="">Phường/xã</option>
+                                                                <option value="AL">Alabama</option>
+                                                                <option value="WY">Wyoming</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ip-control x2">
+                                                        <label for="" class="t-label">
+                                                            Địa chỉ<span class="c-third">*</span>
+                                                        </label>
+                                                        <input type="text">
+                                                    </div>
+                                                </div>
+                                                <p class="mt-20">
+                                                    Bạn chưa có tài khoản? <a href="" class="c-four fw-7 hvt">
+                                                        Tạo ngay
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <div class="cartod-form-ifo mt-50">
+                                                <p class="mb-20 t24 fw-7">
+                                                    Thông tin bổ sung
+                                                </p>
+                                                <div class="ip-control">
+                                                    <label for="" class="t-label">
+                                                        Ghi chú đơn hàng (tùy chọn)<span class="c-third">*</span>
+                                                    </label>
+                                                    <textarea placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn" name="" id=""></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="cartod-form-pay mt-50">
+                                                <p class="mb-20 t24 fw-7 mb-20">
+                                                    Phương thức thanh toán
+                                                </p>
+                                                <div class="cartod-form-pay-gr recheck-block">
+                                                    <div class="cartod-form-pay-box">
+                                                        <div class="cartod-form-pay-inner recheck-item">
+                                                             <input checked hidden type="radio" class="recheck-input">
+                                                            <label for="radio-button" class="radio-label"></label>
+                                                            <p class="text">
+                                                                Chuyển khoản ngân hàng
+                                                            </p>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="cartod-form-pay-box">
+                                                        <div class="cartod-form-pay-inner recheck-item">
+                                                            <input hidden type="radio" class="recheck-input">
+
+                                                            <label for="radio-button" class="radio-label"></label>
+                                                           
+                                                            <p class="text">
+                                                                Thanh toán khi nhận hàng
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="cartod-right pay">
+                                    <div class="cartod-total">
+                                        <div class="cartod-total-inner">
+                                            <p class="c-white t24 fw-7 t-center">
+                                                Đơn hàng của bạn
+                                            </p>
+                                            <div class="cartod-total-block">
+                                                <div class="cartod-total-head">
+                                                    <p class="t16 fw-7 c-white">
+                                                        Sản phẩm
+                                                    </p>
+                                                    <div class="tnum">1</div>
+                                                </div>
+                                                <div class="cartod-total-list">
+                                                    <div class="cartod-total-item">
+                                                        <div class="cartod-total-gr">
+                                                            <div class="cartod-total-img">
+                                                                <div class="inner">
+                                                                    <img src="./assets/images/spt-img/pay.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="cartod-total-ctn">
+                                                                <p class="c-white fw-6 txt">
+                                                                    Son nhung hoa 5g - KOLAN
+                                                                </p>
+                                                                <div class="c-white tprice">
+                                                                    <span> 1</span> x <span>450.000đ</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cartod-total-item">
+                                                        <div class="cartod-total-gr">
+                                                            <div class="cartod-total-img">
+                                                                <div class="inner">
+                                                                    <img src="./assets/images/spt-img/pay.png" alt="">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="cartod-total-ctn">
+                                                                <p class="c-white fw-6 txt">
+                                                                    Bông tắm xơ mướp tự nhiên - KOLAN
+                                                                </p>
+                                                                <div class="c-white tprice">
+                                                                    <span> 1</span> x <span>450.000đ</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cartod-total-item">
+                                                        <div class="cartod-total-gr">
+                                                            <div class="cartod-total-img">
+                                                                <div class="inner">
+                                                                    <img src="./assets/images/spt-img/pay.png" alt="">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="cartod-total-ctn">
+                                                                <p class="c-white fw-6 txt">
+                                                                    Combo xà bông thiên nhiên Rau Má 80g + Bông tắm xơ mướp
+                                                                </p>
+                                                                <div class="c-white tprice">
+                                                                    <span> 1</span> x <span>450.000đ</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cartod-total-if mb-20">
+                                                    <p class="c-white">
+                                                        Thành tiền
+                                                    </p>
+                                                    <p class="c-white fw-7">
+                                                        4,500,000đ
+                                                    </p>
+                                                </div>
+                                                <div class="cartod-total-if">
+                                                    <p class="c-white">
+                                                        Vận chuyển
+                                                    </p>
+                                                    <p class="c-white fw-7">
+                                                        Liên hệ phí vận chuyển sau
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="cartod-total-if mt-30">
+                                                <p class="c-white t20">
+                                                    Tổng cộng
+                                                </p>
+                                                <p class="c-white t24 fw-7">
+                                                    4,500,000đ
+                                                </p>
+                                            </div>
+                                            <div class="cartod-total-btn mt-30">
+                                                <div class="btn bg-white">
+                                                    <span class="icon">
+                                                        <i class="fa-light fa-bag-shopping"></i>
+                                                    </span>
+                                                    <span class="text">
+                                                        Đặt mua
+                                                    </span>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main> 
+
+    <footer class="footer">
+      <div class="footer-wrap"></div>
+    </footer>
+    <div class="back-to-top backToTop">
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+    </div>
+    <script src="./js/library/jquery/jquery.js"></script>
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/library/aos/aos.js"></script>
+    <script src="./js/library/select2/select2.min.js"></script>
+    <script src="./js/library/gallery/lightgallery-all.min.js"></script>
+    <script src="./js/library/jquery/jquery-migrate.js"></script>
+    <script src="./js/library/isotope/isotope.pkgd.min.js"></script>
+    <script src="./js/library/datetime/moment.min.js"></script>
+    <script src="./js/library/datetime/daterangepicker.min.js"></script>
+    <script src="./js/library/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="./js/library/fancybox/fancybox.umd.js"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
