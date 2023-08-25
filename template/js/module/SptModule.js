@@ -110,6 +110,7 @@ export default function SptModule() {
     const chooseProContainers = document.querySelectorAll(
       ".cartod .choose-pro"
     );
+    if (selectAllCheckbox) {
 
     selectAllCheckbox.addEventListener("change", function () {
       const isChecked = selectAllCheckbox.checked;
@@ -119,6 +120,7 @@ export default function SptModule() {
         updateChooseProClass(checkbox);
       });
     });
+  }
 
     otherCheckboxes.forEach(function (checkbox) {
       checkbox.addEventListener("change", function () {
@@ -134,6 +136,21 @@ export default function SptModule() {
         chooseProContainer.classList.remove("active");
       }
     }
+  });
+
+  //js swiper lastest post
+  var swiperlpost = new Swiper(".lpostSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+
   });
 
   

@@ -104,6 +104,9 @@ img {
 .decor-text {
   @include font-decor;
 }
+.f-third {
+  @include font-third;
+}
 .btn {
   &.bg-sec {
     background-color: $color-second;
@@ -118,6 +121,13 @@ img {
         color: #fff;
       }
     }
+  }
+}
+.t36 {
+  font-size: 3.6rem;
+
+  @include max(1200px) {
+    font-size:2.8rem;
   }
 }
 
@@ -2753,6 +2763,236 @@ img {
     .btn {
       margin: 0 auto;
     }
+  }
+}
+
+// css post detail page
+.post {
+  &-banner {
+    &-top{
+      position: relative;
+    }
+    &-box {
+      background-color: $color-second;
+      padding: 5rem;
+      padding-left: 0;
+      width: 56%;
+      position: absolute;
+      top: -5rem;
+      z-index: 1;
+      @include max(1250px){
+        left:0;
+        padding: 1.5rem;
+        width: 70%;
+      }
+
+      @include max(850px) {
+        position: relative;
+        transform: translate(0);
+        inset: 0;
+        width: 100%;
+      }
+    }
+    &-content {
+      margin-left: calc( (100vw - 120rem) / 2);
+      @include max(1250px){
+        margin-left:0 ;
+      }
+
+      .social {
+        column-gap: 1rem;
+      }
+
+      .icon{
+        width: 2.4rem;
+        height: 2.4rem;
+        cursor: pointer;
+      }
+    }
+    &-bot {
+      width: calc(100vw - (100vw - 120rem) / 2);
+      max-width: 100%;
+      margin-left: auto;
+
+      @include max(850px) {
+        margin-top: 0;
+      }
+
+      .box {
+        overflow: hidden;
+        position: relative;
+        padding-top: calc((700 / 1464) * 100%);
+
+        img {
+          @include imgCover;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &-img {
+    width: 50%;
+    padding: 0 1.2rem;
+
+    .box {
+      overflow: hidden;
+      position: relative;
+      padding-top: calc((393 / 598) * 100%);
+
+      img {
+        @include imgCover;
+      }
+    }
+  }
+  &-desc {
+    width: 50%;
+    padding: 0 1.2rem;
+
+
+    .text {
+      width: 85%;
+      margin-left: auto;
+
+      ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  &-content {
+
+    &-top {
+
+    }
+    &-block {
+      margin: 0 -1.2rem;
+
+      @include max(992px){
+        flex-direction: column;
+        row-gap: 2rem;
+        
+        .post-img {
+          width: 100%;
+        }
+        .post-desc {
+          width: 100%;
+
+          .text {
+            width: 100%;
+          }
+        }
+      }
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        padding: 10rem 0;
+
+        @include max(992px){
+          flex-direction: column;
+          row-gap: 2rem;
+          padding: 3rem 0;
+          
+          .post-img {
+            width: 100%;
+          }
+          .post-desc {
+            width: 100%;
+  
+            .text {
+              width: 100%;
+            }
+          }
+        }
+
+        .text {
+          margin-left:unset;
+        }
+      }
+    }
+    &-bot {
+      .title {
+        width: 50%;
+        @include max(992px){
+          width: 100%;
+
+        }
+      }
+      .desc {
+        margin: 0 -1.2rem;
+        @include max(768px){
+          flex-direction: column;
+
+        }
+      }
+      .left {
+        width: 50%;
+        padding:0 1.2rem;
+        @include max(768px){
+          width: 100%;
+
+        }
+      }
+      .right {
+        width: 50%;
+        padding:0 1.2rem;
+        @include max(768px){
+          width: 100%;
+
+        }
+      }
+    }
+  }
+
+}
+
+//css slogan post 
+.slogan {
+
+  &-inner{
+    padding:3rem 8rem;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+
+    @include max(1024px) {
+      width: 100%;
+      padding:2rem 5rem;
+
+
+      .text {
+        text-align: center;
+      }
+    }
+  }
+  &-decor {
+    position: absolute;
+
+    &:nth-child(1){
+      width: 5rem;
+      height: 5rem;
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(2){
+      width: 25%;
+      top: 0;
+      right: 0;
+    }
+    &:nth-child(3){
+      width: 25%;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+// css for lastest post 
+.lpost {
+  padding-bottom: 10rem;
+  .blog-item {
+    width: 100%;
+    padding: 0;
   }
 }
 
