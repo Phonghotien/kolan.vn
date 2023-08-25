@@ -20,6 +20,12 @@
 .j-beweent {
   justify-content: space-between;
 }
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-center {
+  justify-content: center;
+}
 .align-center {
   align-items: center;
 }
@@ -78,6 +84,9 @@ img {
 }
 .mb-15 {
   margin-bottom: 1.5rem;
+}
+.mb-50{
+  margin-bottom:5rem;
 }
 .mb-100 {
   margin-bottom: 10rem;
@@ -2657,3 +2666,93 @@ img {
     border-radius: 3.4rem !important;
   }
 }
+
+// css login form
+.plogin {
+  position: relative;
+  z-index: 1;
+  @include max(1200px) {
+    padding: 2.4rem 0;
+  }
+
+  &-wrap {
+    position: relative;
+  }
+  &-decor {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    img {
+      object-fit: cover;
+    }
+    
+  }
+  &-flex {
+    @include flex;
+    margin: 0 -5rem;
+    align-items: center;
+    @include max(1380px) {
+      margin: 0 -1.5rem;
+    }
+    @include max(678px) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-left {
+    width: 55%;
+    padding: 0 5rem;
+    @include max(1380px) {
+      padding: 0 1.5rem;
+    }
+    @include max(1200px) {
+      width: 50%;
+    }
+    @include max(678px) {
+      width: 100%;
+    }
+  }
+  &-right {
+    width: 45%;
+    padding: 0 5rem;
+    @include max(1380px) {
+      padding: 0 1.5rem;
+    }
+    @include max(1200px) {
+      width: 50%;
+    }
+    @include max(678px) {
+      width: 100%;
+    }
+  }
+  &-imgp {
+    .inner {
+      position: relative;
+      padding-top: calc((398 / 610) * 100%);
+      img {
+        @include imgCover;
+      }
+    }
+  }
+  &-block {
+    padding: 2.4rem 0;
+    @include max(678px) {
+      .t-title {
+        text-align: center;
+      }
+      .text-mb {
+        text-align: center;
+      }
+    }
+  }
+  &-form {
+    .btn {
+      margin: 0 auto;
+    }
+  }
+}
+
