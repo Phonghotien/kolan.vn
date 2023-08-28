@@ -1,11 +1,11 @@
 export default function SptModule() {
 
   $(document).ready(function () {
-    if ($(".fblog-inner .fblog-img").length > 0) {
+    if ($(".fblog-inner .fblog-img")) {
       $(".fblog-inner .fblog-img").eq(0).addClass("show");
     }
 
-    if ($(".fblog-link-js").length > 0) {
+    if ($(".fblog-link-js")) {
 
     $(".fblog-link-js").hover(
       function () {
@@ -199,6 +199,63 @@ export default function SptModule() {
       swiper: swiper,
     },
   });
+
+  // custom message swiper
+  var cmessswiper = new Swiper(".cmessSwipper", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    loop:true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+  
+      768: {
+        slidesPerView: 2,
+
+      },
+      1100: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+
+      },
+    },
+  });
+
+  //hàm count up number
+  var a = 0;
+  let counterBlock = document.querySelector(".count-block");
+  if (counterBlock) {
+      let oTop = counterBlock.offsetTop - window.innerHeight;
+      $(window).scroll(function() {
+          if (a == 0 && $(window).scrollTop() > oTop) {
+              $(".counter-up").each(function() {
+                  var $this = $(this),
+                      countTo = $this.attr("data-count");
+                  $({
+                      countNum: $this.text(),
+                  }).animate({
+                          countNum: countTo,
+                      },
+
+                      {
+                          duration: 2000,
+                          easing: "swing",
+                          step: function() {
+                              $this.text(Math.floor(this.countNum));
+                          },
+                          complete: function() {
+                              $this.text(this.countNum);
+                          },
+                      }
+                  );
+              });
+              a = 1;
+          }
+      });
+  }
 
   
 }
