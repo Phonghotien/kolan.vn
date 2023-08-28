@@ -2095,7 +2095,11 @@ img {
 
             &:first-child {
               text-align: left;
-              width: 5%;
+              width: 14%;
+
+              @include max(550px) {
+                width: 25%;
+              }
             }
           }
         }
@@ -3723,6 +3727,13 @@ img {
 
 //css for section thong diep san pham
 .main.gioi-thieu {
+  .post-content {
+    padding-top: 10rem;
+
+    @include max(768px) {
+      padding-top: 4rem;
+    }
+  }
   .post-content-block:last-child {
     padding-bottom:0;
 
@@ -3818,4 +3829,142 @@ img {
     }
   }
 
+}
+
+//css for section video banner 
+.vbanner {
+  &-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 70rem;
+
+    @include max(1024px) {
+      height:50rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, #2E8232 0%, rgba(46, 130, 50, 0.00) 100%);
+    }
+
+
+  }
+  &-bg {
+    position: absolute;
+    inset: 0;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    z-index: 2;
+    position: relative;
+    height: 100%;
+  }
+  &-btn {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &-play {
+      width: 11rem;
+      height: 11rem;
+      aspect-ratio: 1;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius:50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1;
+      transition: all 0.3s ease;
+
+
+      i {
+        color: white;
+        font-size: 2.6rem;
+        transition: all 0.3s ease;
+      }
+
+      @include hover {
+        background-color: $color-second;
+
+        i {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.effect-out-box::before,
+.effect-out-box::after {
+  bottom: 0;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: ripple 3s infinite;
+}
+
+.effect-out-box-circle::before,
+.effect-out-box-circle::after {
+  bottom: 0;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: ripple 3s infinite;
+}
+
+.effect-out-box::before {
+  animation-delay: 2s;
+}
+.effect-out-box::after {
+  animation-delay: 0s;
+}
+.effect-out-box-circle::before {
+  animation-delay: 1s;
+}
+.effect-out-box-circle::after {
+  animation-delay: 0s;
+}
+
+@keyframes ripple {
+  0% {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    border: 0.1rem solid rgba(255, 255, 255, 0.30);
+    box-shadow: 2px 20px 60px 0px rgba(252, 219, 96, 0.10);
+  }
+  50% {
+    width: 250%;
+    height: 250%;
+    border: 0.1rem solid rgba(255, 255, 255, 0.30);
+    box-shadow: 2px 20px 60px 0px rgba(252, 219, 96, 0.10);
+
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    width: 350%;
+    height: 350%;
+    border: 0.1rem solid rgba(255, 255, 255, 0.30);
+    box-shadow: 2px 20px 60px 0px rgba(252, 219, 96, 0.10);
+
+  }
 }

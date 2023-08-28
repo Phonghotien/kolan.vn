@@ -110,41 +110,41 @@ export default function SptModule() {
   });
 
   //js for select all product in cart
-  $(document).ready(function () {
-    const selectAllCheckbox = document.getElementById("selectAllPro");
-    const otherCheckboxes = document.querySelectorAll(
-      '.cartod tbody input[type="checkbox"]'
-    );
-    const chooseProContainers = document.querySelectorAll(
-      ".cartod .choose-pro"
-    );
-    if (selectAllCheckbox) {
+  // $(document).ready(function () {
+  //   const selectAllCheckbox = document.getElementById("selectAllPro");
+  //   const otherCheckboxes = document.querySelectorAll(
+  //     '.cartod tbody input[type="checkbox"]'
+  //   );
+  //   const chooseProContainers = document.querySelectorAll(
+  //     ".cartod .choose-pro"
+  //   );
+  //   if (selectAllCheckbox) {
 
-    selectAllCheckbox.addEventListener("change", function () {
-      const isChecked = selectAllCheckbox.checked;
+  //   selectAllCheckbox.addEventListener("change", function () {
+  //     const isChecked = selectAllCheckbox.checked;
 
-      otherCheckboxes.forEach(function (checkbox) {
-        checkbox.checked = isChecked;
-        updateChooseProClass(checkbox);
-      });
-    });
-  }
+  //     otherCheckboxes.forEach(function (checkbox) {
+  //       checkbox.checked = isChecked;
+  //       updateChooseProClass(checkbox);
+  //     });
+  //   });
+  // }
 
-    otherCheckboxes.forEach(function (checkbox) {
-      checkbox.addEventListener("change", function () {
-        updateChooseProClass(checkbox);
-      });
-    });
+  //   otherCheckboxes.forEach(function (checkbox) {
+  //     checkbox.addEventListener("change", function () {
+  //       updateChooseProClass(checkbox);
+  //     });
+  //   });
 
-    function updateChooseProClass(checkbox) {
-      const chooseProContainer = checkbox.closest(".choose-pro");
-      if (checkbox.checked) {
-        chooseProContainer.classList.add("active");
-      } else {
-        chooseProContainer.classList.remove("active");
-      }
-    }
-  });
+  //   function updateChooseProClass(checkbox) {
+  //     const chooseProContainer = checkbox.closest(".choose-pro");
+  //     if (checkbox.checked) {
+  //       chooseProContainer.classList.add("active");
+  //     } else {
+  //       chooseProContainer.classList.remove("active");
+  //     }
+  //   }
+  // });
 
   //js swiper lastest post
   var swiperlpost = new Swiper(".lpostSwiper", {
