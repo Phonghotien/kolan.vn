@@ -108,6 +108,7 @@ img {
   @include font-third;
 }
 .btn {
+   
   &.bg-sec {
     background-color: $color-second;
     transition: 0.3s ease-in-out;
@@ -3309,6 +3310,20 @@ img {
 //css for history section
 .history {
   overflow: hidden;
+  position: relative;
+
+  &-decor {
+    position: absolute;
+    z-index: -1;
+    &:nth-child(1) {
+      top: 0;
+      right: 10%;
+    }
+    &:nth-child(2) {
+      left: 0;
+      bottom: 0;
+    }
+  }
   &-wrap {
     max-width: 100%;
     width: calc(100vw - (100vw - 120rem) / 2);
@@ -3474,5 +3489,237 @@ img {
 
     }
 
+  }
+}
+
+
+//css mini cart 
+
+
+.side {
+
+  &-overlay {
+    position: fixed;
+    @include full;
+    background-color: rgba($color: $color-black, $alpha: 0.6);
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(110%);
+    visibility: hidden;
+    &.open {
+      opacity: 1;
+      transform: translate(0, 0);
+      visibility: visible;
+    }
+    &.x2 {
+      transition-delay: 2s;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    @include mid-flex;
+    cursor: pointer;
+    &:hover {
+      .icon {
+        color: $color-second;
+      }
+    }
+    .icon {
+      font-size: 1.8rem;
+      font-weight: 400;
+      transition: 0.6s ease-in-out;
+      color: $color-text;
+    }
+  }
+}
+
+.cmini {
+  position: fixed;
+  top: var(--size-hd);
+  right: 0;
+  width: 55rem;
+  max-width: 90%;
+  bottom: 0;
+  overflow-y: auto;
+  background: #fff;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(110%);
+  visibility: hidden;
+  &.open {
+    opacity: 1;
+    transform: translate(0, 0);
+    visibility: visible;
+    .ani-img {
+      animation: fadeInUp 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      animation-delay: 0.4s;
+      opacity: 1;
+    }
+  }
+
+  @include max(1200px) {
+    top: 6rem;
+    height: calc(100vh - 6rem);
+    height: calc(var(--window-height) - 6rem);
+    padding-bottom: unset;
+  }
+  @include max(500px) {
+    max-width: 100%;
+  }
+  &-wrap {
+    padding: 10rem 5rem;
+    padding-right: 3rem;
+    @include flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    @include max(500px) {
+      padding: 1.6rem;
+      padding-right: 0.6rem;
+    }
+  }
+  &-dcor {
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateY(15%);
+    .ani-img {
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+      transition-delay: 0.4s;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &-img {
+    width: 9.7rem;
+    height: 9.7rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    img {
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+  &-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 2rem;
+    max-height: 35.1rem;
+    row-gap: 3rem;
+    @include flex;
+
+    @include min(1440px) {
+      max-height: 50rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-second;
+    }
+    &::-webkit-scrollbar {
+      width: 0.3rem;
+    }
+    &::-webkit-scrollbar-track {
+      background: #feefe8;
+    }
+    flex-direction: column;
+    @include max(1200px) {
+      max-height: calc(100vh - 32rem);
+    }
+    @include max(768px) {
+      padding-right: 1.2rem;
+    }
+  }
+  &-item {
+    @include flex;
+    gap: 1.2rem;
+
+    &:last-child {
+      margin-bottom:1rem;
+    }
+  }
+  &-name {
+    @include fz-16;
+    color: $color-pri;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    @include max(500px) {
+      font-size: 1.4rem;
+    }
+  }
+  &-content {
+    @include flex;
+    flex-direction: column;
+  }
+  &-price {
+    font-weight: 700;
+    @include fz-16;
+    color: $color-four;
+    margin-top: auto;
+    margin-left: auto;
+  }
+  &-total {
+    @include flex;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding-right: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  &-control {
+    margin-top: auto;
+    padding-right: 2rem;
+    @include flex;
+    gap: 2.4rem;
+  }
+  &-count {
+    @include flex;
+    margin-top: auto;
+  }
+  .btn {
+    .text {
+      white-space: nowrap;
+    }
+  }
+}
+.cmini-have-cart {
+  height: 100%;
+}
+.cart-empty {
+  position: relative;
+  justify-content: center;
+
+  &-decor {
+    position: absolute;
+    left: -5rem;
+    right: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .icon-cart-empty {
+    max-height:30rem;
+
+    img {
+      height:100%;
+      width: auto;object-fit: contain;
+    };
+  }
+  .btn {
+    margin: 0 auto;
   }
 }

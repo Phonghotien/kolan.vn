@@ -1,6 +1,12 @@
 export default function SptModule() {
+
   $(document).ready(function () {
-    $(".fblog-inner .fblog-img").eq(0).addClass("show");
+    if ($(".fblog-inner .fblog-img").length > 0) {
+      $(".fblog-inner .fblog-img").eq(0).addClass("show");
+    }
+
+    if ($(".fblog-link-js").length > 0) {
+
     $(".fblog-link-js").hover(
       function () {
         // Sử dụng $(this) để xác định phần tử liên quan
@@ -20,6 +26,8 @@ export default function SptModule() {
         $(".fblog-inner .fblog-img").eq(0).addClass("show");
       }
     );
+    }
+
   });
 
   //js for page pdp

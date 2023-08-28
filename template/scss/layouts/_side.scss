@@ -42,9 +42,9 @@
             transform: translate(0, 0);
             visibility: visible;
         }
-        @include min($res-mobile-min) {
-            display: none;
-        }
+        // @include min($res-mobile-min) {
+        //     display: none;
+        // }
     }
     &-open {
         width: 4rem;
@@ -63,9 +63,9 @@
             transform: translate(100%, -50%);
             visibility: visible;
         }
-        @include min($res-mobile-min) {
-            display: none;
-        }
+        // @include min($res-mobile-min) {
+        //     display: none;
+        // }
         &-wrap {
             width: 30px;
             height: 30px;
