@@ -153,5 +153,44 @@ export default function SptModule() {
 
   });
 
+  //js for section slide history
+  var swiper = new Swiper(".historySwiper", {
+    spaceBetween: 0,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    centeredSlides: true,
+    breakpoints: {
+      // 600: {
+      //   slidesPerView: 3,
+      // },
+      1024: {
+        slidesPerView: 5,
+      },
+      1440: {
+        slidesPerView: 9,
+      },
+    },
+
+  });
+  var swiper2 = new Swiper(".historySwiper2", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+
+    breakpoints: {
+      1024: {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+
   
 }
