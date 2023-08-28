@@ -257,5 +257,33 @@ export default function SptModule() {
       });
   }
 
+    // home history swiper
+    var cmessswiper = new Swiper(".historyhSwiper", {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      loop:true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+  
+      breakpoints: {
+    
+        600: {
+          slidesPerView: 2,
+  
+        },
+        992: {
+          slidesPerView: 3,
+  
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+  
+        },
+      },
+    });
+
   
 }

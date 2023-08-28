@@ -3968,3 +3968,35 @@ img {
 
   }
 }
+
+//css home history section 
+.historyh {
+  padding: 4rem 0;
+  background-color: $color-second;
+
+  &-inner {
+    .swiper-wrapper {
+      align-items: center;
+    }
+  }
+
+  &-flex {
+    column-gap: 1.5rem;
+    align-items: center;
+    padding: 0 3.5rem;
+    border-left: 0.1rem solid rgba(46, 130, 50, 0.30);
+
+
+
+    @include max(1440px) {
+      padding: 0 1rem;
+    }
+
+    @include max(600px) {
+      flex-direction: column;
+    }
+  }
+  &-year {
+
+  }
+}

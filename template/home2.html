@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/backdoor.css" />
+    <link rel="icon" type="image/png" href="./assets/images/mona.png" />
+    <title>Home page</title>
+    <link rel="stylesheet" href="./js/library/aos/aos.css" />
+    <link ref="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <link ref="stylesheet" href="./js/library/fancybox/fancybox.css" />
+
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <div class="menu-nav">
+          <!-- Cấu trúc html menu -->
+          <ul class="menu-list">
+            <li class="menu-item current-menu-item">
+              <a href="" class="menu-link"> Demo </a>
+            </li>
+            <li class="menu-item dropdown">
+              <a href="" class="menu-link"> Demo </a>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a href="" class="menu-link"> Demo </a>
+                </li>
+                <li class="menu-item dropdown">
+                  <a href="" class="menu-link"> Demo </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="btn side-open">
+            <div class="btn-inner">
+              <span class="icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Have To Cart -->
+          <div class="cmini side-fixed">
+            <div class="cmini-wrap">
+              <div class="side-close">
+                <div class="icon"><i class="fas fa-times"></i></div>
+              </div>
+              <p class="t-title t-center mb-30">Giỏ hàng</p>
+              <div class="cmini-list">
+                <div class="cmini-item">
+                  <div class="cmini-img">
+                    <img src="./assets/images/spt-img/cart-img.png" alt="" />
+                  </div>
+                  <div class="cmini-content">
+                    <a href="" class="cart-name t16 fw-6"
+                      >Giày cầu lông Kawasaki K063</a
+                    >
+                    <div class="cmini-count">
+                      <div class="quantity">
+                        <div class="quantity-count">
+                          <div class="count">
+                            <div class="count-btn count-minus">
+                              <i class="fas fa-minus icon"></i>
+                            </div>
+                            <input
+                              type="text"
+                              value="1"
+                              max="12"
+                              min="0"
+                              class="count-input"
+                              hidden=""
+                            />
+                            <p class="count-number"></p>
+                            <div class="count-btn count-plus">
+                              <i class="fas fa-plus icon"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cmini-price">
+                    <span>450.000đ</span>
+                  </div>
+                </div>
+                <div class="cmini-item">
+                  <div class="cmini-img">
+                    <img src="./assets/images/spt-img/cart-img2.png" alt="" />
+                  </div>
+                  <div class="cmini-content">
+                    <a href="" class="cart-name t16 fw-6"
+                      >Vợt cầu lông Yonex Nanoray Z Speed</a
+                    >
+                    <div class="cmini-count">
+                      <div class="quantity">
+                        <div class="quantity-count">
+                          <div class="count">
+                            <div class="count-btn count-minus">
+                              <i class="fas fa-minus icon"></i>
+                            </div>
+                            <input
+                              type="text"
+                              value="1"
+                              max="12"
+                              min="0"
+                              class="count-input"
+                              hidden=""
+                            />
+                            <p class="count-number"></p>
+                            <div class="count-btn count-plus">
+                              <i class="fas fa-plus icon"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cmini-price">
+                    <span>1.450.000đ</span>
+                  </div>
+                </div>
+                <div class="cmini-item">
+                  <div class="cmini-img">
+                    <img src="./assets/images/spt-img/cart-img.png" alt="" />
+                  </div>
+                  <div class="cmini-content">
+                    <a href="" class="cart-name t16 fw-6"
+                      >Giày Kason FYTL018-2</a
+                    >
+                    <div class="cmini-count">
+                      <div class="quantity">
+                        <div class="quantity-count">
+                          <div class="count">
+                            <div class="count-btn count-minus">
+                              <i class="fas fa-minus icon"></i>
+                            </div>
+                            <input
+                              type="text"
+                              value="1"
+                              max="12"
+                              min="0"
+                              class="count-input"
+                              hidden=""
+                            />
+                            <p class="count-number"></p>
+                            <div class="count-btn count-plus">
+                              <i class="fas fa-plus icon"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cmini-price">
+                    <span>1.450.000đ</span>
+                  </div>
+                </div>
+                <div class="cmini-item">
+                  <div class="cmini-img">
+                    <img src="./assets/images/spt-img/cart-img2.png" alt="" />
+                  </div>
+                  <div class="cmini-content">
+                    <a href="" class="cart-name t16 fw-6"
+                      >Vợt cầu lông Yonex Nanoray Z Speed</a
+                    >
+                    <div class="cmini-count">
+                      <div class="quantity">
+                        <div class="quantity-count">
+                          <div class="count">
+                            <div class="count-btn count-minus">
+                              <i class="fas fa-minus icon"></i>
+                            </div>
+                            <input
+                              type="text"
+                              value="1"
+                              max="12"
+                              min="0"
+                              class="count-input"
+                              hidden=""
+                            />
+                            <p class="count-number"></p>
+                            <div class="count-btn count-plus">
+                              <i class="fas fa-plus icon"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cmini-price">
+                    <span>1.450.000đ</span>
+                  </div>
+                </div>
+                <div class="cmini-item">
+                  <div class="cmini-img">
+                    <img src="./assets/images/spt-img/cart-img.png" alt="" />
+                  </div>
+                  <div class="cmini-content">
+                    <a href="" class="cart-name t16 fw-6"
+                      >Giày Kason FYTL018-2</a
+                    >
+                    <div class="cmini-count">
+                      <div class="quantity">
+                        <div class="quantity-count">
+                          <div class="count">
+                            <div class="count-btn count-minus">
+                              <i class="fas fa-minus icon"></i>
+                            </div>
+                            <input
+                              type="text"
+                              value="1"
+                              max="12"
+                              min="0"
+                              class="count-input"
+                              hidden=""
+                            />
+                            <p class="count-number"></p>
+                            <div class="count-btn count-plus">
+                              <i class="fas fa-plus icon"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cmini-price">
+                    <span>1.450.000đ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cmini-total">
+                <span class="t20 fw-7">Tổng cộng</span>
+                <span class="t20 fw-7 c-four">4.500.000đ</span>
+              </div>
+              <div class="cmini-control">
+                <a href="" class="btn trans full">
+                  <span class="btn-inner">
+                    <span class="text"> Xem giỏ hàng </span>
+                  </span>
+                </a>
+                <a href="" class="btn bg-pri full">
+                  <span class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                  <span class="text"> Đặt mua </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- cart empty -->
+            <div class="cmini-wrap cart-empty">
+              <div class="cart-empty-decor">
+                <img src="assets/images/spt-img/cart-de.png" alt="" />
+              </div>
+              <div class="side-close">
+                <div class="icon"><i class="fas fa-times"></i></div>
+              </div>
+              <div class="cart-empty-content">
+                <p class="t-title t-center mb-20">Giỏ hàng</p>
+                <p class="text t-center t16 fw-4 mb-20">
+                  Hiện tại giỏ hàng của bạn đang trống
+                </p>
+                <div class="icon-cart-empty t-center mb-30">
+                  <img src="./assets/images/spt-img/cart-empty.png" alt="" />
+                </div>
+                <a href="" class="btn bg-pri">
+                  <span class="btn-inner">
+                    <span class="text"> Quay lại trang chủ </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="main">
+        <!-- section video banner -->
+        <div class="vbanner">
+            <div class="vbanner-wrap">
+            <div class="vbanner-bg">
+                <img src="assets/images/spt-img/vbanner-bg.png" alt="" />
+            </div>
+            <div class="vbanner-content">
+                <div class="container">
+
+                <!-- inner home page  -->
+                <div class="vbanner-inner">
+                    <div
+                    class="history-title d-flex flex-center align-center"
+                    data-aos="zoom-in"
+                    data-aos-duration="1500"
+                    >
+                    <span class="text t64 fw-7 d-flex align-center c-white count-block"
+                        ><span class="num counter-up" data-count="51">0</span>+ năm
+                        &nbsp;</span
+                    >
+                    <span class="t56 fw-7 text c-white"> chăm sóc sắc đẹp Việt </span>
+                    </div>
+                </div> 
+
+                <div class="vbanner-btn effect-out-box-circle"  data-aos="zoom-in"  data-aos-duration="1500">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=tSudDOmc1H8&pp=ygUOa29sYW4gY29tZXN0aWM%3D" class="vbanner-btn-play effect-out-box">
+                    <span class="icon">
+                        <i class="fa-solid fa-play"></i>
+                    </span>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- section history home -->
+        <div class="historyh">
+             <div class="historyh-wrap">
+                    <div class="historyh-inner">
+                        <div class="swiper historyhSwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="historyh-flex d-flex">
+                                  <div class="historyh-year fw-7 t56 ">
+                                    1972
+                                  </div>
+                                 
+                                  <div class="historyh-desc t14  fw-5">
+                                    Hình thành thương hiệu dược mỹ phẩm KOLAN
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="historyh-flex d-flex">
+                                  <div class="historyh-year fw-7 t56 ">
+                                    1982
+                                  </div>
+                                  
+                                  <div class="historyh-desc t14  fw-5">
+                                    Nghiên cứu và Phát triển sản phẩm
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="historyh-flex d-flex">
+                                  <div class="historyh-year fw-7 t56 ">
+                                    1972
+                                  </div>
+                                 
+                                  <div class="historyh-desc t14  fw-5">
+                                    Xây dựng nhà máy đạt chuẩn cGMP của KOLAN lần đầu tiên tại Việt Nam
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="historyh-flex d-flex">
+                                  <div class="historyh-year fw-7 t56 ">
+                                    2000
+                                  </div>
+                                 
+                                  <div class="historyh-desc t14  fw-5">
+                                    Hình thành thương hiệu dược mỹ phẩm KOLAN
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+             </div>
+        </div>
+
+        <!-- thông điệp sản phẩm -->
+        <div class="cmess">
+            <div class="cmess-wrap">
+              <p class="t-title t-center mb-60">Thông điệp sản phẩm</p>
+              <!-- phần này cho homepage không dùng swiper -->
+              <div class="cmess-content">
+                <div class="cmess-content-list d-flex">
+                  <div class="cmess-content-item">
+                    <div class="cmess-content-flex">
+                      <div class="cmess-content-icon t-center">
+                        <div class="icon">
+                          <img src="assets/images/spt-img/cmess1.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="cmess-content-percent count-block t-center">
+                        <span class="t64 fw-7 c-pri"
+                          ><span class="counter-up" data-count="100">0</span>%</span
+                        >
+                      </div>
+                      <div class="cmess-content-desc t-center fw-5">
+                        Quy trình sản xuất dược mỹ phẩm đạt chuẩn theo quy trình
+                        cGMP
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cmess-content-item">
+                    <div class="cmess-content-flex">
+                      <div class="cmess-content-icon t-center">
+                        <div class="icon">
+                          <img src="assets/images/spt-img/cmess1.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="cmess-content-percent count-block t-center">
+                        <span class="t64 fw-7 c-pri"
+                          ><span class="counter-up" data-count="100">0</span>%</span
+                        >
+                      </div>
+                      <div class="cmess-content-desc t-center fw-5">
+                        Quy trình sản xuất dược mỹ phẩm đạt chuẩn theo quy trình
+                        cGMP
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cmess-content-item">
+                    <div class="cmess-content-flex">
+                      <div class="cmess-content-icon t-center">
+                        <div class="icon">
+                          <img src="assets/images/spt-img/cmess2.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="cmess-content-percent count-block t-center">
+                        <span class="t64 fw-7 c-pri"
+                          ><span class="counter-up" data-count="100">0</span>%</span
+                        >
+                      </div>
+                      <div class="cmess-content-desc t-center fw-5">
+                        Không bao giờ thử nghiệm trên động vật
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-wrap">
+                <div class="gallery-flex">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- bài viết mới nhất -->
+        <section class="lpost">
+            <div class="container">
+                <div class="lpost-wrap">
+                    <h2 class="t-title t-center mb-50">Bài viết mới nhất</h2>
+                    <div class="lpost-slide">
+                        <div class="swiper lpostSwiper">
+                            <div class="swiper-wrapper">
+
+                              <div class="swiper-slide" data-aos="zoom-out-up">
+                                <div class="blog-item">
+                                    <div class="blog-img">
+                                      <div class="blog-img-box">
+                                        <a href="" class="blog-link">
+                                          <img
+                                            src="assets/images/spt-img/fblog-img.png"
+                                            alt=""
+                                          />
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <span class="blog-time mt-15 mb-15 d-block t-center">
+                                      14 tháng 6, 2023
+                                    </span>
+                                    <a href="" class="blog-title t-center t16 fw-6">
+                                      Ra mắt bộ sản phẩm mới với chiết xuất 100% thiên
+                                      nhiên từ lá chùm ngây
+                                    </a>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide" data-aos="zoom-out-up">
+                                <div class="blog-item">
+                                    <div class="blog-img">
+                                      <div class="blog-img-box">
+                                        <a href="" class="blog-link">
+                                          <img
+                                            src="assets/images/spt-img/fblog-img.png"
+                                            alt=""
+                                          />
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <span class="blog-time mt-15 mb-15 d-block t-center">
+                                      14 tháng 6, 2023
+                                    </span>
+                                    <a href="" class="blog-title t-center t16 fw-6">
+                                      Ra mắt bộ sản phẩm mới với chiết xuất 100% thiên
+                                      nhiên từ lá chùm ngây
+                                    </a>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide" data-aos="zoom-out-up">
+                                <div class="blog-item">
+                                    <div class="blog-img">
+                                      <div class="blog-img-box">
+                                        <a href="" class="blog-link">
+                                          <img
+                                            src="assets/images/spt-img/fblog-img.png"
+                                            alt=""
+                                          />
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <span class="blog-time mt-15 mb-15 d-block t-center">
+                                      14 tháng 6, 2023
+                                    </span>
+                                    <a href="" class="blog-title t-center t16 fw-6">
+                                      Ra mắt bộ sản phẩm mới với chiết xuất 100% thiên
+                                      nhiên từ lá chùm ngây
+                                    </a>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide" data-aos="zoom-out-up">
+                                <div class="blog-item">
+                                    <div class="blog-img">
+                                      <div class="blog-img-box">
+                                        <a href="" class="blog-link">
+                                          <img
+                                            src="assets/images/spt-img/fblog-img.png"
+                                            alt=""
+                                          />
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <span class="blog-time mt-15 mb-15 d-block t-center">
+                                      14 tháng 6, 2023
+                                    </span>
+                                    <a href="" class="blog-title t-center t16 fw-6">
+                                      Ra mắt bộ sản phẩm mới với chiết xuất 100% thiên
+                                      nhiên từ lá chùm ngây
+                                    </a>
+                                  </div>
+                              </div>
+
+                            </div>
+                          </div>
+                    </div>
+                    <div class="lpost-viewall d-flex flex-center mt-30">
+                        <a href="" class="btn">
+                            <span class="text">
+                                Xem chi tiết
+                            </span>
+                            <span class="icon">
+                                <i class="fa-light fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="side-overlay"></div>
+    <div class="side-overlay x2"></div>
+
+    <footer class="footer">
+      <div class="footer-wrap"></div>
+    </footer>
+    <div class="back-to-top backToTop">
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+    </div>
+    <script src="./js/library/jquery/jquery.js"></script>
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/library/aos/aos.js"></script>
+    <script src="./js/library/select2/select2.min.js"></script>
+    <script src="./js/library/gallery/lightgallery-all.min.js"></script>
+    <script src="./js/library/jquery/jquery-migrate.js"></script>
+    <script src="./js/library/isotope/isotope.pkgd.min.js"></script>
+    <script src="./js/library/datetime/moment.min.js"></script>
+    <script src="./js/library/datetime/daterangepicker.min.js"></script>
+    <script src="./js/library/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="./js/library/fancybox/fancybox.umd.js"></script>
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
