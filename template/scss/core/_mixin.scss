@@ -603,3 +603,6 @@
   -o-mask-size: cover;
   -o-mask-repeat: no-repeat;
 }
+@mixin col-odd($col, $odd) {
+  width: calc(100% / $col + ((100% / $col) / $odd/$col));
+}

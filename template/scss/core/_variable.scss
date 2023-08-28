@@ -1,10 +1,11 @@
 :root {
   --size-hd: 12rem;
+  --size-hd-sticky: 6rem;
   // distance section
   --pd-sc: 8rem;
-
   @media (max-width: 1200px) {
     --pd-sc: 4rem;
+    --size-hd: 7rem;
   }
 }
 
