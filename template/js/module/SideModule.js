@@ -33,4 +33,38 @@ export default function SideModule() {
             Close();
         })
     }
+
+    const sideOpenc = document.querySelector(".pcate-open");
+  const sideClosec = document.querySelector(".side-close-cate");
+  const sideFixedc = document.querySelector(".pcate-fixed");
+  const sideOverlayc = document.querySelector(".overlay-pcate");
+  const bodyc = document.getElementsByTagName("body")[0];
+  function sideOpencate() {
+    sideFixedc.classList.add("open");
+    sideOverlayc.classList.add("open");
+    bodyc.style.overflowY = "hidden";
+  }
+
+  function sideClosecate() {
+    sideFixedc.classList.remove("open");
+    sideOverlayc.classList.remove("open");
+    bodyc.style.overflowY = "auto";
+  }
+  if (sideOpenc) {
+    sideOpenc.addEventListener("click", () => {
+      sideOpencate();
+    });
+  }
+  if (sideClosec) {
+    sideClosec.addEventListener("click", () => {
+      sideClosecate();
+    });
+  }
+  if (sideOverlayc) {
+    sideOverlayc.addEventListener("click", () => {
+      sideClosecate();
+    });
+  }
 }
+
+
