@@ -82,6 +82,12 @@ img {
 .mt-60 {
   margin-top: 6rem;
 }
+.mt-100 {
+  margin-top: 10rem;
+  @include max(1024px) {
+    margin-top:6rem;
+  }
+}
 .mb-15 {
   margin-bottom: 1.5rem;
 }
@@ -90,15 +96,28 @@ img {
 }
 .mb-60 {
   margin-bottom:6rem;
+
+  @include max(768px) {
+    margin-top:3rem ;
+  }
 }
 .mb-100 {
   margin-bottom: 10rem;
+
 }
 .pt-30 {
   padding-top: 3rem;
 }
 .sec-py {
   padding: 10rem 0;
+
+  @include max(1300px){
+    padding: 8rem 0;
+  }
+
+  @include max(1024px){
+    padding: 6rem 0;
+  }
 
   @include max(768px) {
     padding: 4rem 0;
@@ -1013,6 +1032,7 @@ img {
       .tname {
         font-weight: 700;
         @include fz-24;
+        word-break: break-all;
       }
       .tlink {
         text-decoration: underline;
@@ -1240,6 +1260,10 @@ img {
       &-gr {
         @include flex;
         gap: 2rem;
+
+        @include max (500px) {
+          flex-direction: column;
+        }
         .btn {
           height: 100%;
         }
@@ -1334,7 +1358,6 @@ img {
               color: #444545;
               @include hover {
                 color: $color-pri;
-                font-weight: 700;
                 .icon {
                   transform: rotate(-30deg);
                 }
@@ -1667,6 +1690,12 @@ img {
   }
 }
 
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0px $color-second,0 0 0 0px $color-second;  }
+  50% { transform: scale(0.98); }
+  100% { box-shadow: 0 0 0 15px rgba(0,210,255,0),0 0 0 30px rgba(0,210,255,0); }
+}
+
 .cstep {
   position: relative;
   z-index: 1;
@@ -1678,21 +1707,31 @@ img {
       margin-top: 3rem;
 
       @include max(1024px) {
-        margin: 0 1rem;
+        margin: 0rem;
         margin-top: 2.4rem;
         flex-wrap: wrap;
         row-gap: 2rem;
         justify-content: center;
+        column-gap: 3rem;
       }
 
-      @include max(768px) {
+      @include max(500px) {
+        column-gap: 1rem;
       }
     }
     &-step {
       width: calc((100% / 5));
 
       @include max(1024px) {
-        width: 50%;
+        width: 16%;
+        border-radius: 50%;
+        
+      }
+      @include max(768px) {
+        width: 28%;
+      }
+      @include max(400px) {
+        width: 30%;
       }
 
       &.step-pass {
@@ -1724,6 +1763,9 @@ img {
         .cstep-odt-icon {
           position: relative;
           padding-right: 10%;
+          @include max(1024px) {
+            padding-right: 0;
+          }
           &::after {
             content: "";
             position: absolute;
@@ -1735,10 +1777,15 @@ img {
 
             @include max(1024px) {
               width: 70%;
+              display: none;
             }
           }
           &:before {
             border-radius: 5rem;
+
+            @include max(1024px) {
+              border-radius:50% ;
+            }
           }
         }
       }
@@ -1747,6 +1794,9 @@ img {
         .cstep-odt-icon {
           position: relative;
           padding-left: 10%;
+          @include max(1024px) {
+            padding-left: 0;
+          }
           &::after {
             content: "";
             position: absolute;
@@ -1758,18 +1808,36 @@ img {
             background-color: rgb(235, 232, 232);
             @include max(1024px) {
               width: 70%;
+              display: none;
             }
           }
           &:before {
             border-top-right-radius: 5rem;
             border-bottom-right-radius: 5rem;
+
+            @include max(1024px) {
+              border-radius:50% ;
+            }
           }
         }
       }
 
       &.active {
+        animation: pulse 2s ease-out infinite;
+
+        &::after {
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          border-radius: 50%;
+          position: absolute;
+        }
         .cstep-odt-icon {
           background: transparent;
+          
           img {
             filter: brightness(0) invert(0.3);
           }
@@ -1788,7 +1856,7 @@ img {
       gap: 2rem;
       margin: 0 -2.5rem;
       @include max(1024px) {
-        margin: 0 -1rem;
+        margin: 0rem;
       }
     }
     &-icon {
@@ -1800,6 +1868,13 @@ img {
       flex-direction: column;
       row-gap: 0.5rem;
 
+      @include max(1024px) {
+        height:auto;
+        aspect-ratio: 1;
+        padding: 1rem !important;
+      }
+    
+
       &::before {
         content: "";
         position: absolute;
@@ -1809,9 +1884,22 @@ img {
         background-color: rgb(235, 232, 232);
         clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
         z-index: 0; /* Đặt z-index âm để nó nằm phía dưới phần tử chính */
+
+        @include max(1024px) {
+          clip-path: none;
+          border-radius: 50%;
+        }
       }
       .text {
         z-index: 1;
+
+        @include max(1024px) {
+          text-align: center;
+        }
+
+        @include max(768px){
+          @include fz-14;
+        }
       }
       .icon {
         width: 2.2rem;
@@ -2180,6 +2268,10 @@ img {
         @include hover {
           color: $color-second;
         }
+
+        @include max(550px) {
+          @include fz-14;
+        }
       }
     }
     &-price {
@@ -2221,6 +2313,10 @@ img {
       padding: 4.8rem 3rem;
       background: $color-pri;
       border-radius: 2.4rem;
+
+      @include max(768px) {
+        padding: 2.8rem 1rem
+      }
     }
     &-gr {
       @include flex;
@@ -2357,6 +2453,14 @@ img {
       }
       &-box {
         flex: 1;
+        position: relative;
+        overflow: hidden;
+
+        .decor {
+          position: absolute;
+          right:0;
+          bottom: -0.5rem;
+        }
       }
       &-inner {
         @include mid-flex;
@@ -2411,6 +2515,10 @@ img {
   &-complete {
     &-head {
       margin-bottom: 7rem;
+
+      @include max(1024){
+        margin-bottom: 4rem;
+      }
     }
     &-icon {
       @include mid-flex;
@@ -3060,7 +3168,17 @@ img {
 .pcontact {
   position: relative;
   z-index: 1;
-  overflow: hidden;
+
+  &-decor {
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    top: 5%;
+  }
+
+  &-inner {
+    overflow: hidden;
+  }
 
   &-wrap {
     width: calc(100vw - (100vw - 120rem) / 2);
@@ -3138,10 +3256,19 @@ img {
 
         input {
           border-radius: 4.4rem;
+
+          &:focus {
+            background-color: white;
+            border-color: $color-pri ;
+          }
         }
 
         textarea {
           border-radius:2.4rem ;
+          &:focus {
+            background-color: white;
+            border-color: $color-pri ;
+          }
         }
 
         input,
@@ -3505,6 +3632,12 @@ img {
     transition: all 0.3s ease-in-out;
     padding: 1rem 3rem;
     padding-top: 3rem;
+    cursor: pointer;
+
+    @include hover {
+      color:$color-pri;
+    }
+
     @include max(768px) {
       padding: 1rem;
       padding-top: 2rem;
@@ -3591,7 +3724,7 @@ img {
     max-width: 100%;
   }
   &-wrap {
-    padding: 10rem 5rem;
+    padding: 4rem;
     padding-right: 3rem;
     @include flex;
     flex-direction: column;
@@ -3612,6 +3745,11 @@ img {
     img {
       height: 100% !important;
       object-fit: cover;
+    }
+
+    @include max(768px) {
+      width: 8rem;
+      height: 8rem;
     }
   }
   &-list {
@@ -3666,6 +3804,16 @@ img {
   &-content {
     @include flex;
     flex-direction: column;
+
+    .cart-name {
+      @include max(768px) {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Số dòng hiển thị */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   }
   &-price {
     font-weight: 700;
@@ -3673,6 +3821,9 @@ img {
     color: $color-four;
     margin-top: auto;
     margin-left: auto;
+    @include max(768px) {
+      @include fz-14;
+    }
   }
   &-total {
     @include flex;
@@ -3876,7 +4027,7 @@ img {
     justify-content:center;
     align-items:center;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
 
     &-play {
       width: 11rem;
@@ -3986,8 +4137,6 @@ img {
     padding: 0 3.5rem;
     border-left: 0.1rem solid rgba(46, 130, 50, 0.30);
 
-
-
     @include max(1440px) {
       padding: 0 1rem;
     }
@@ -3998,5 +4147,82 @@ img {
   }
   &-year {
 
+  }
+}
+
+// css for section gallery
+.gallery {
+  &-inner {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+  }
+  &-flex {
+    display: flex;
+    margin: 0 -1.2rem;
+    &:nth-child(odd) {
+      .gallery-flex-left {
+        // width: calc((8 / 12) * 100%);
+        flex: 2;
+        padding: 0 1.2rem;
+        .box {
+          position: relative;
+          overflow: hidden;
+          padding-top: calc((384 / 1056) * 100%);
+
+          img {
+              @include imgCover;
+          }
+        }
+      }
+      .gallery-flex-right {
+        // width: calc((4 / 12) * 100%);
+        flex: 1;
+        padding: 0 1.2rem;
+        .box {
+          position: relative;
+          overflow: hidden;
+          padding-top: calc((472 / 648) * 100%);
+
+
+          img {
+              @include imgCover;
+          }
+        }
+      }
+    }
+    &:nth-child(even) {
+      .gallery-flex-left {
+        // width: calc((4 / 12) * 100%);
+        flex: 1;
+        padding: 0 1.2rem;
+        .box {
+          position: relative;
+          overflow: hidden;
+          padding-top: calc((472 / 648) * 100%);
+
+          img {
+              @include imgCover;
+          }
+        }
+
+      }
+      .gallery-flex-right {
+        // width: calc((8 / 12) * 100%);
+        flex: 2;
+        padding: 0 1.2rem;
+        .box {
+          position: relative;
+          overflow: hidden;
+          padding-top: calc((384 / 1056) * 100%);
+
+          img {
+              @include imgCover;
+          }
+        }
+      }
+    }
   }
 }
