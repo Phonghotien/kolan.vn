@@ -1,0 +1,13 @@
+.bn {
+  min-height: calc((700 / 1728) * 100vw);
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    @include full;
+    background-image: url(../assets/images/bn-bg.png);
+    background-size: cover;
+    z-index: -1;
+  }
+}

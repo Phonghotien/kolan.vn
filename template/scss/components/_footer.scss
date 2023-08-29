@@ -1,1 +1,224 @@
-.footer {}
+.footer {
+  padding-top: 15rem;
+  padding-bottom: 8rem;
+  background: #c0dc8f;
+  position: relative;
+  @include max(1050px) {
+    padding: 6rem 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    @include full;
+    background-image: url(../assets/images/bg-ft.jpg);
+    background-size: cover;
+    mix-blend-mode: multiply;
+    background-repeat: no-repeat;
+  }
+  &-flex {
+    @include flex;
+    margin: 0 -1.2rem;
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+  }
+  &-col {
+    width: calc((4 / 12) * 100%);
+    padding: 0 1.2rem;
+    @include max(1050px) {
+      width: 50%;
+      order: 2;
+      &:nth-child(2) {
+        width: 100%;
+        order: 1;
+      }
+    }
+    @include max(500px) {
+      width: 100%;
+    }
+  }
+  .f-tt {
+    margin-bottom: 2rem;
+    @include max(500px) {
+      text-align: center;
+    }
+  }
+  &-if {
+    .f-list {
+      @include flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+    .f-item {
+      @include flex;
+      align-items: center;
+      gap: 1rem;
+      .icon {
+        @include mid-flex;
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+      }
+      .t-link {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &-social {
+    width: calc((3 / 4) * 100%);
+    margin-left: auto;
+    overflow: hidden;
+    @include max(1200px) {
+      width: 100%;
+    }
+    .i-list {
+      @include flex;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      @include max(500px) {
+        justify-content: center;
+      }
+      .i-item {
+        width: 2.4rem;
+        height: 2.4rem;
+        @include mid-flex;
+      }
+    }
+    .fb-page {
+      @include max(500px) {
+        margin: 0 auto;
+        display: flex;
+        width: fit-content;
+      }
+    }
+  }
+  &-nav {
+    margin-bottom: 2rem;
+    .menu-list {
+      @include flex;
+      flex-wrap: wrap;
+      margin: 0 -0.6rem;
+      row-gap: 1.2rem;
+      .menu-item {
+        width: 50%;
+      }
+      .menu-link {
+        padding: 0 0.6rem;
+        font-size: 1.4rem;
+        &.current_page_item {
+          color: $color-pri;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &-ctn {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    top: -8rem;
+    @include max(1200px) {
+      width: 40rem;
+      top: unset;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &-logo {
+    @include mid-flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.4rem;
+    margin-bottom: 3rem;
+    .custom-logo-link {
+      @include mid-flex;
+      width: 15rem;
+      margin: 0 auto;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &-form {
+    &-block {
+      .ip-control {
+        position: relative;
+        input {
+          background: transparent;
+          border-color: $color-pri;
+          color: $color-text;
+          padding-right: 3.2rem;
+          &:focus {
+            background: #fff;
+          }
+          &::placeholder {
+            color: rgba(71, 70, 70, 0.5);
+          }
+        }
+      }
+      .btn-icon {
+        position: absolute;
+        width: 3.6rem;
+        height: 3.6rem;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+        color: $color-pri;
+      }
+    }
+  }
+  &-bot {
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+    padding-top: 2rem;
+    position: relative;
+    margin-top: 2.4rem;
+    @include max(800px) {
+      flex-direction: column;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 0.1rem;
+      top: 0;
+      background: rgba(46, 130, 50, 0.2);
+    }
+  }
+  &-policy {
+    .p-list {
+      @include flex;
+      margin: 0 -1rem;
+      @include max(500px) {
+        margin: 0 -0.4rem;
+      }
+      .p-link {
+        padding: 0 1rem;
+        font-size: 1.4rem;
+        transition: 0.3s ease-in-out;
+        @include hover {
+          color: $color-pri;
+        }
+        @include max(500px) {
+          font-size: 2.8vw;
+          padding: 0 0.4rem;
+        }
+      }
+    }
+  }
+  &-sign {
+    @include flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .icon {
+      @include mid-flex;
+    }
+  }
+}

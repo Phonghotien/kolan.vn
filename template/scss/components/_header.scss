@@ -25,6 +25,9 @@
     .header-logo {
       width: 4rem;
     }
+    .cmini {
+      top: var(--size-hd-sticky);
+    }
   }
   &-logo {
     position: absolute;
@@ -127,6 +130,7 @@
     }
     &-btn {
       position: relative;
+      cursor: pointer;
       @include hover {
         &::before {
           opacity: 1;

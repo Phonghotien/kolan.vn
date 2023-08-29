@@ -20,7 +20,7 @@ import ScrollTriggerModule from "./module/ScrollTriggerModule.js";
 import LoadMoreModule from "./module/LoadMoreModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
-// import SptModule from "./module/SptModule.js";
+import SptModule from "./module/SptModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -54,5 +54,5 @@ window.addEventListener("DOMContentLoaded", () => {
   SideModule();
   CollapseModule();
   ComponentModule();
-  // SptModule();
+  SptModule();
 });

@@ -59,6 +59,18 @@ textarea {
 .main {
   min-height: 68vh;
   padding-top: var(--size-hd);
+  position: relative;
+  background: #f8f7f2;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    @include full;
+    background-image: url(../assets/images/bg-main.png);
+    background-size: cover;
+    z-index: -1;
+    mix-blend-mode: multiply;
+  }
 }
 
 .container {
