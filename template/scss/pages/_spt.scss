@@ -1727,7 +1727,7 @@ img {
         border-radius: 50%;
         
       }
-      @include max(768px) {
+      @include max(650px) {
         width: 28%;
       }
       @include max(400px) {
@@ -1823,17 +1823,19 @@ img {
       }
 
       &.active {
-        animation: pulse 2s ease-out infinite;
+        @include max(1024px) {
+          animation: pulse 2s ease-out infinite;
 
-        &::after {
-          content: '';
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 1;
-          border-radius: 50%;
-          position: absolute;
+          &::after {
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            border-radius: 50%;
+            position: absolute;
+          }
         }
         .cstep-odt-icon {
           background: transparent;
@@ -1895,10 +1897,11 @@ img {
 
         @include max(1024px) {
           text-align: center;
+          @include fz-14;
         }
 
-        @include max(768px){
-          @include fz-14;
+        @include max(768px) {
+          font-size:1.2rem;
         }
       }
       .icon {
@@ -2185,9 +2188,14 @@ img {
               text-align: left;
               width: 14%;
 
+              @include max(768px){
+                width: 17%;
+              }
+
               @include max(550px) {
                 width: 25%;
               }
+             
             }
           }
         }
@@ -2516,7 +2524,7 @@ img {
     &-head {
       margin-bottom: 7rem;
 
-      @include max(1024){
+      @include max(1024px){
         margin-bottom: 4rem;
       }
     }
@@ -4158,15 +4166,24 @@ img {
     display: flex;
     flex-direction: column;
     row-gap: 2.4rem;
+    @include max(768px) {
+      row-gap:1rem;
+    }
   }
   &-flex {
     display: flex;
     margin: 0 -1.2rem;
+      @include max(768px) {
+          padding:0 -0.5rem;
+        }
     &:nth-child(odd) {
       .gallery-flex-left {
         // width: calc((8 / 12) * 100%);
         flex: 2;
         padding: 0 1.2rem;
+          @include max(768px) {
+          padding:0 0.5rem;
+        }
         .box {
           position: relative;
           overflow: hidden;
@@ -4181,6 +4198,9 @@ img {
         // width: calc((4 / 12) * 100%);
         flex: 1;
         padding: 0 1.2rem;
+          @include max(768px) {
+          padding:0 0.5rem;
+        }
         .box {
           position: relative;
           overflow: hidden;
@@ -4198,6 +4218,10 @@ img {
         // width: calc((4 / 12) * 100%);
         flex: 1;
         padding: 0 1.2rem;
+
+        @include max(768px) {
+          padding:0 0.5rem;
+        }
         .box {
           position: relative;
           overflow: hidden;
@@ -4213,6 +4237,9 @@ img {
         // width: calc((8 / 12) * 100%);
         flex: 2;
         padding: 0 1.2rem;
+        @include max(768px) {
+          padding:0 0.5rem;
+        }
         .box {
           position: relative;
           overflow: hidden;
@@ -4225,4 +4252,199 @@ img {
       }
     }
   }
+}
+
+// css for page category
+.pcate {
+
+  &-flex {
+    @include flex;
+    margin: 0 -4rem;
+    @include max(1350px) {
+      margin: 0 -1.5rem;
+    }
+  }
+  &-left {
+    width: calc((3 / 12) * 100%);
+    padding: 0 4rem;
+    @include max(1350px) {
+      padding: 0 1.5rem;
+    }
+    &.pcate-fixed {
+      @include max(1024px) {
+        position: fixed;
+        top: var(--size-hd);
+        right: 0;
+        width: 75rem;
+        max-width: 100%;
+        bottom: 0;
+        overflow-y: auto;
+        background: #fff;
+        transition: 0.5s ease-in-out;
+        transform: translateX(110%);
+        visibility: hidden;
+        z-index: 7;
+        padding: 2.4rem 1.2rem;
+        &.open {
+          opacity: 1;
+          transform: translateX(0);
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &-right {
+    width: calc((9 / 12) * 100%);
+    padding: 0 4rem;
+    @include max(1350px) {
+      padding: 0 1.5rem;
+    }
+    @include max(1024px) {
+      width: 100%;
+    }
+  }
+    &-open {
+    @include mid-flex;
+    padding: 0 1.6rem;
+    height: 4rem;
+    gap: 0.6rem;
+    font-size: 1.6rem;
+    color: $color-pri;
+    border: 0.1rem solid $color-pri;
+    @include min(1025px) {
+      display: none;
+    }
+  }
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    &-item {
+      width:fit-content;
+
+      &.active {
+        .icon-box {
+          .icon {
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+
+          }
+        }
+        .text {
+          color: $color-pri;
+          font-size: 2.6rem;
+        }
+      }
+      @include hover {
+     
+        .text {
+          color: $color-pri;
+        }
+      }
+    }
+
+    .icon-box {
+      width:2.8rem;
+      height:2.8rem;
+
+      .icon {
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .text {
+      padding: 1rem;
+      transition: all 0.3s ease-in-out;
+
+    }
+  }
+ 
+
+
+  &-fillg {
+    .t-title {
+      line-height: 1;
+      @include max(1024px) {
+        text-align: center;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  &-ctr {
+    @include flex;
+    gap: 1rem;
+    .btn {
+      margin: unset;
+    }
+  }
+  &-heads {
+    @include flex;
+    gap: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include max(1024px) {
+      margin-bottom: 2.4rem;
+      gap: 0.4rem;
+      > p {
+        width: 100%;
+        @include max(500px) {
+          width: auto;
+        }
+      }
+    }
+    .b-group {
+      @include flex;
+      gap: 1rem;
+      align-items: center;
+      @include max(1024px) {
+        order: 2;
+      }
+      @include max(500px) {
+        width: 100%;
+      }
+      .text {
+        color: $color-text;
+        flex-shrink: 0;
+      }
+      .pcate-select {
+        min-width: 18rem;
+        @include max(500px) {
+          min-width: unset;
+          width: 100%;
+        }
+        .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
+          padding-left: 0.8rem !important;
+          padding-right: 2rem !important;
+        }
+      }
+    }
+  }
+
+  &-list {
+    @include flex;
+    margin: 0 -0.6rem;
+    flex-wrap: wrap;
+    row-gap: 1.2rem;
+  }
+  &-item {
+    padding: 0 0.6rem;
+    width: calc(100% / 3);
+
+    @include max(600px) {
+      width: 50%;
+    }
+  }
+
+  &-pagi {
+    .page-numbers {
+      justify-content: center;
+    }
+  }
+
 }
