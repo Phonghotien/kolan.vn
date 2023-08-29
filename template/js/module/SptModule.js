@@ -285,5 +285,21 @@ export default function SptModule() {
       },
     });
 
+
+    // js for section swiper product homepage
+    var swiperp = new Swiper(".swiperProduct", {
+      navigation: {
+        nextEl: ".swiper-next-button",
+        prevEl: ".swiper-prev-button"
+      },
+      effect: "fade",
+      loop: "infinite",
+
+    });
+    
+    swiperp.on('slideChange', function(sld) {
+      document.body.setAttribute('data-sld', sld.realIndex);
+    })
+
   
 }
