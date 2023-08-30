@@ -4228,10 +4228,8 @@ img {
 .pcate {
   &-flex {
     @include flex;
-    margin: 0 -4rem;
-    @include max(1350px) {
-      margin: 0 -1.5rem;
-    }
+    margin: 0 -1.2rem;
+  
     @include max(1024px){
       flex-direction:column;
       margin: 0;
@@ -4239,10 +4237,8 @@ img {
   }
   &-left {
     width: calc((3 / 12) * 100%);
-    padding: 0 4rem;
-    @include max(1350px) {
-      padding: 0 1.5rem;
-    }
+    padding: 0 1.2rem;
+
     @include max(1024px){
       width: 100%;
       padding: 0;
@@ -4272,10 +4268,8 @@ img {
   }
   &-right {
     width: calc((9 / 12) * 100%);
-    padding: 0 4rem;
-    @include max(1350px) {
-      padding: 0 1.5rem;
-    }
+    padding: 0 1.2rem;
+
     @include max(1024px) {
       width: 100%;
       padding: 0;
