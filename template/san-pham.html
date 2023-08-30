@@ -1,1192 +1,953 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/backdoor.css" />
-    <link rel="icon" type="image/png" href="./assets/images/mona.png" />
-    <title>Home page</title>
-    <link rel="stylesheet" href="./js/library/aos/aos.css" />
-    <link ref="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
-    <link ref="stylesheet" href="./js/library/fancybox/fancybox.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="header-nav">
-        <div class="menu-nav">
-          <!-- Cấu trúc html menu -->
-          <ul class="menu-list">
-            <li class="menu-item current-menu-item">
-              <a href="" class="menu-link"> Demo </a>
-            </li>
-            <li class="menu-item dropdown">
-              <a href="" class="menu-link"> Demo </a>
-              <ul class="menu-list">
-                <li class="menu-item">
-                  <a href="" class="menu-link"> Demo </a>
-                </li>
-                <li class="menu-item dropdown">
-                  <a href="" class="menu-link"> Demo </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <div class="btn side-open">
-            <div class="btn-inner">
-              <span class="icon">
-                <i class="fas fa-shopping-cart"></i>
-              </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/backdoor.css" />
+  <link rel="icon" type="image/png" href="./assets/images/mona.png" />
+  <title>Home page</title>
+  <link rel="stylesheet" href="./js/library/aos/aos.css" />
+  <link ref="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+  <link ref="stylesheet" href="./js/library/fancybox/fancybox.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-nav">
+      <div class="menu-nav">
+        <!-- Cấu trúc html menu -->
+        <ul class="menu-list">
+          <li class="menu-item current-menu-item">
+            <a href="" class="menu-link"> Demo </a>
+          </li>
+          <li class="menu-item dropdown">
+            <a href="" class="menu-link"> Demo </a>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="" class="menu-link"> Demo </a>
+              </li>
+              <li class="menu-item dropdown">
+                <a href="" class="menu-link"> Demo </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="btn side-open">
+          <div class="btn-inner">
+            <span class="icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Have To Cart -->
+        <div class="cmini side-fixed">
+          <div class="cmini-wrap">
+            <div class="side-close">
+              <div class="icon"><i class="fas fa-times"></i></div>
+            </div>
+            <p class="t-title t-center mb-30">Giỏ hàng</p>
+            <div class="cmini-list">
+              <div class="cmini-item">
+                <div class="cmini-img">
+                  <img src="./assets/images/spt-img/cart-img.png" alt="" />
+                </div>
+                <div class="cmini-content">
+                  <a href="" class="cart-name t16 fw-6">Giày cầu lông Kawasaki K063</a>
+                  <div class="cmini-count">
+                    <div class="quantity">
+                      <div class="quantity-count">
+                        <div class="count">
+                          <div class="count-btn count-minus">
+                            <i class="fas fa-minus icon"></i>
+                          </div>
+                          <input type="text" value="1" max="12" min="0" class="count-input" hidden="" />
+                          <p class="count-number"></p>
+                          <div class="count-btn count-plus">
+                            <i class="fas fa-plus icon"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cmini-price">
+                  <span>450.000đ</span>
+                </div>
+              </div>
+              <div class="cmini-item">
+                <div class="cmini-img">
+                  <img src="./assets/images/spt-img/cart-img2.png" alt="" />
+                </div>
+                <div class="cmini-content">
+                  <a href="" class="cart-name t16 fw-6">Vợt cầu lông Yonex Nanoray Z Speed</a>
+                  <div class="cmini-count">
+                    <div class="quantity">
+                      <div class="quantity-count">
+                        <div class="count">
+                          <div class="count-btn count-minus">
+                            <i class="fas fa-minus icon"></i>
+                          </div>
+                          <input type="text" value="1" max="12" min="0" class="count-input" hidden="" />
+                          <p class="count-number"></p>
+                          <div class="count-btn count-plus">
+                            <i class="fas fa-plus icon"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cmini-price">
+                  <span>1.450.000đ</span>
+                </div>
+              </div>
+              <div class="cmini-item">
+                <div class="cmini-img">
+                  <img src="./assets/images/spt-img/cart-img.png" alt="" />
+                </div>
+                <div class="cmini-content">
+                  <a href="" class="cart-name t16 fw-6">Giày Kason FYTL018-2</a>
+                  <div class="cmini-count">
+                    <div class="quantity">
+                      <div class="quantity-count">
+                        <div class="count">
+                          <div class="count-btn count-minus">
+                            <i class="fas fa-minus icon"></i>
+                          </div>
+                          <input type="text" value="1" max="12" min="0" class="count-input" hidden="" />
+                          <p class="count-number"></p>
+                          <div class="count-btn count-plus">
+                            <i class="fas fa-plus icon"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cmini-price">
+                  <span>1.450.000đ</span>
+                </div>
+              </div>
+              <div class="cmini-item">
+                <div class="cmini-img">
+                  <img src="./assets/images/spt-img/cart-img2.png" alt="" />
+                </div>
+                <div class="cmini-content">
+                  <a href="" class="cart-name t16 fw-6">Vợt cầu lông Yonex Nanoray Z Speed</a>
+                  <div class="cmini-count">
+                    <div class="quantity">
+                      <div class="quantity-count">
+                        <div class="count">
+                          <div class="count-btn count-minus">
+                            <i class="fas fa-minus icon"></i>
+                          </div>
+                          <input type="text" value="1" max="12" min="0" class="count-input" hidden="" />
+                          <p class="count-number"></p>
+                          <div class="count-btn count-plus">
+                            <i class="fas fa-plus icon"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cmini-price">
+                  <span>1.450.000đ</span>
+                </div>
+              </div>
+              <div class="cmini-item">
+                <div class="cmini-img">
+                  <img src="./assets/images/spt-img/cart-img.png" alt="" />
+                </div>
+                <div class="cmini-content">
+                  <a href="" class="cart-name t16 fw-6">Giày Kason FYTL018-2</a>
+                  <div class="cmini-count">
+                    <div class="quantity">
+                      <div class="quantity-count">
+                        <div class="count">
+                          <div class="count-btn count-minus">
+                            <i class="fas fa-minus icon"></i>
+                          </div>
+                          <input type="text" value="1" max="12" min="0" class="count-input" hidden="" />
+                          <p class="count-number"></p>
+                          <div class="count-btn count-plus">
+                            <i class="fas fa-plus icon"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cmini-price">
+                  <span>1.450.000đ</span>
+                </div>
+              </div>
+            </div>
+            <div class="cmini-total">
+              <span class="t20 fw-7">Tổng cộng</span>
+              <span class="t20 fw-7 c-four">4.500.000đ</span>
+            </div>
+            <div class="cmini-control">
+              <a href="" class="btn trans full">
+                <span class="btn-inner">
+                  <span class="text"> Xem giỏ hàng </span>
+                </span>
+              </a>
+              <a href="" class="btn bg-pri full">
+                <span class="icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+                <span class="text"> Đặt mua </span>
+              </a>
             </div>
           </div>
 
-          <!-- Have To Cart -->
-          <div class="cmini side-fixed">
-            <div class="cmini-wrap">
-              <div class="side-close">
-                <div class="icon"><i class="fas fa-times"></i></div>
-              </div>
-              <p class="t-title t-center mb-30">Giỏ hàng</p>
-              <div class="cmini-list">
-                <div class="cmini-item">
-                  <div class="cmini-img">
-                    <img src="./assets/images/spt-img/cart-img.png" alt="" />
-                  </div>
-                  <div class="cmini-content">
-                    <a href="" class="cart-name t16 fw-6"
-                      >Giày cầu lông Kawasaki K063</a
-                    >
-                    <div class="cmini-count">
-                      <div class="quantity">
-                        <div class="quantity-count">
-                          <div class="count">
-                            <div class="count-btn count-minus">
-                              <i class="fas fa-minus icon"></i>
-                            </div>
-                            <input
-                              type="text"
-                              value="1"
-                              max="12"
-                              min="0"
-                              class="count-input"
-                              hidden=""
-                            />
-                            <p class="count-number"></p>
-                            <div class="count-btn count-plus">
-                              <i class="fas fa-plus icon"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cmini-price">
-                    <span>450.000đ</span>
-                  </div>
-                </div>
-                <div class="cmini-item">
-                  <div class="cmini-img">
-                    <img src="./assets/images/spt-img/cart-img2.png" alt="" />
-                  </div>
-                  <div class="cmini-content">
-                    <a href="" class="cart-name t16 fw-6"
-                      >Vợt cầu lông Yonex Nanoray Z Speed</a
-                    >
-                    <div class="cmini-count">
-                      <div class="quantity">
-                        <div class="quantity-count">
-                          <div class="count">
-                            <div class="count-btn count-minus">
-                              <i class="fas fa-minus icon"></i>
-                            </div>
-                            <input
-                              type="text"
-                              value="1"
-                              max="12"
-                              min="0"
-                              class="count-input"
-                              hidden=""
-                            />
-                            <p class="count-number"></p>
-                            <div class="count-btn count-plus">
-                              <i class="fas fa-plus icon"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cmini-price">
-                    <span>1.450.000đ</span>
-                  </div>
-                </div>
-                <div class="cmini-item">
-                  <div class="cmini-img">
-                    <img src="./assets/images/spt-img/cart-img.png" alt="" />
-                  </div>
-                  <div class="cmini-content">
-                    <a href="" class="cart-name t16 fw-6"
-                      >Giày Kason FYTL018-2</a
-                    >
-                    <div class="cmini-count">
-                      <div class="quantity">
-                        <div class="quantity-count">
-                          <div class="count">
-                            <div class="count-btn count-minus">
-                              <i class="fas fa-minus icon"></i>
-                            </div>
-                            <input
-                              type="text"
-                              value="1"
-                              max="12"
-                              min="0"
-                              class="count-input"
-                              hidden=""
-                            />
-                            <p class="count-number"></p>
-                            <div class="count-btn count-plus">
-                              <i class="fas fa-plus icon"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cmini-price">
-                    <span>1.450.000đ</span>
-                  </div>
-                </div>
-                <div class="cmini-item">
-                  <div class="cmini-img">
-                    <img src="./assets/images/spt-img/cart-img2.png" alt="" />
-                  </div>
-                  <div class="cmini-content">
-                    <a href="" class="cart-name t16 fw-6"
-                      >Vợt cầu lông Yonex Nanoray Z Speed</a
-                    >
-                    <div class="cmini-count">
-                      <div class="quantity">
-                        <div class="quantity-count">
-                          <div class="count">
-                            <div class="count-btn count-minus">
-                              <i class="fas fa-minus icon"></i>
-                            </div>
-                            <input
-                              type="text"
-                              value="1"
-                              max="12"
-                              min="0"
-                              class="count-input"
-                              hidden=""
-                            />
-                            <p class="count-number"></p>
-                            <div class="count-btn count-plus">
-                              <i class="fas fa-plus icon"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cmini-price">
-                    <span>1.450.000đ</span>
-                  </div>
-                </div>
-                <div class="cmini-item">
-                  <div class="cmini-img">
-                    <img src="./assets/images/spt-img/cart-img.png" alt="" />
-                  </div>
-                  <div class="cmini-content">
-                    <a href="" class="cart-name t16 fw-6"
-                      >Giày Kason FYTL018-2</a
-                    >
-                    <div class="cmini-count">
-                      <div class="quantity">
-                        <div class="quantity-count">
-                          <div class="count">
-                            <div class="count-btn count-minus">
-                              <i class="fas fa-minus icon"></i>
-                            </div>
-                            <input
-                              type="text"
-                              value="1"
-                              max="12"
-                              min="0"
-                              class="count-input"
-                              hidden=""
-                            />
-                            <p class="count-number"></p>
-                            <div class="count-btn count-plus">
-                              <i class="fas fa-plus icon"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cmini-price">
-                    <span>1.450.000đ</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cmini-total">
-                <span class="t20 fw-7">Tổng cộng</span>
-                <span class="t20 fw-7 c-four">4.500.000đ</span>
-              </div>
-              <div class="cmini-control">
-                <a href="" class="btn trans full">
-                  <span class="btn-inner">
-                    <span class="text"> Xem giỏ hàng </span>
-                  </span>
-                </a>
-                <a href="" class="btn bg-pri full">
-                  <span class="icon">
-                    <i class="fas fa-shopping-cart"></i>
-                  </span>
-                  <span class="text"> Đặt mua </span>
-                </a>
-              </div>
+          <!-- cart empty -->
+          <div class="cmini-wrap cart-empty">
+            <div class="cart-empty-decor">
+              <img src="assets/images/spt-img/cart-de.png" alt="" />
             </div>
+            <div class="side-close">
+              <div class="icon"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="cart-empty-content">
+              <p class="t-title t-center mb-20">Giỏ hàng</p>
+              <p class="text t-center t16 fw-4 mb-20">
+                Hiện tại giỏ hàng của bạn đang trống
+              </p>
+              <div class="icon-cart-empty t-center mb-30">
+                <img src="./assets/images/spt-img/cart-empty.png" alt="" />
+              </div>
+              <a href="" class="btn bg-pri">
+                <span class="btn-inner">
+                  <span class="text"> Quay lại trang chủ </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-            <!-- cart empty -->
-            <div class="cmini-wrap cart-empty">
-              <div class="cart-empty-decor">
-                <img src="assets/images/spt-img/cart-de.png" alt="" />
-              </div>
-              <div class="side-close">
-                <div class="icon"><i class="fas fa-times"></i></div>
-              </div>
-              <div class="cart-empty-content">
-                <p class="t-title t-center mb-20">Giỏ hàng</p>
-                <p class="text t-center t16 fw-4 mb-20">
-                  Hiện tại giỏ hàng của bạn đang trống
-                </p>
-                <div class="icon-cart-empty t-center mb-30">
-                  <img src="./assets/images/spt-img/cart-empty.png" alt="" />
+  <main class="main">
+    <section class="sec-pcate sec-py">
+      <div class="sec-pcate-decor">
+        <img src="assets/images/spt-img/rose-cate.png" alt="">
+      </div>
+      <div class="container">
+        <div class="pcate">
+          <div class="pcate-wrap">
+
+            <div class="pcate-block mt-50">
+              <div class="pcate-flex tabJS">
+                <div class="pcate-left">
+
+                  <div class="pcate-fillg">
+                    <p class="t-title mb-30">sản phẩm</p>
+                    <div class="pcate-link">
+                      <div class="tabBtn pcate-link-item">
+                        <div class="icon-box">
+                          <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                              fill="none">
+                              <path
+                                d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
+                                fill="#2E8232" />
+                              <path d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
+                                fill="#2E8232" />
+                            </svg>
+                          </div>
+                        </div>
+                        <a href="3" class="text t24 fw-7">
+                          Tất cả <span class="t14 fw-4">(23)</span>
+                        </a>
+                      </div>
+                      <div class="tabBtn pcate-link-item">
+                        <div class="icon-box">
+                          <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                              fill="none">
+                              <path
+                                d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
+                                fill="#2E8232" />
+                              <path d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
+                                fill="#2E8232" />
+                            </svg>
+                          </div>
+                        </div>
+                        <a href="#" class="text t24 fw-7">Trang điểm</a>
+                      </div>
+                      <div class="tabBtn pcate-link-item">
+                        <div class="icon-box">
+                          <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                              fill="none">
+                              <path
+                                d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
+                                fill="#2E8232" />
+                              <path d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
+                                fill="#2E8232" />
+                            </svg>
+                          </div>
+                        </div>
+                        <a href="#" class="text t24 fw-7">Tắm & Dưỡng thể</a>
+                      </div>
+                      <div class="tabBtn pcate-link-item">
+                        <div class="icon-box">
+                          <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                              fill="none">
+                              <path
+                                d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
+                                fill="#2E8232" />
+                              <path d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
+                                fill="#2E8232" />
+                              <path
+                                d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
+                                fill="#2E8232" />
+                            </svg>
+                          </div>
+                        </div>
+                        <a href="#" class="text t24 fw-7">Bộ sản phẩm</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <a href="" class="btn bg-pri">
-                  <span class="btn-inner">
-                    <span class="text"> Quay lại trang chủ </span>
-                  </span>
-                </a>
+
+                <div class="pcate-right">
+                  <div class="pcate-block">
+                    <div class="pcate-heads mb-30">
+                      <p class="t40 fw-7"></p>
+                      <div class="b-group">
+                        <span class="text"> Sắp xếp theo: </span>
+                        <div class="pcate-select">
+                          <select class="re-select-main">
+                            <option selected disabled value="AL">
+                              Mới nhất
+                            </option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="WY">Wyoming</option>
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="tabPanel">
+                      <div class="pcate-prd">
+                        <div class="pcate-list">
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pcate-pagi mt-50">
+                        <ul class="page-numbers">
+                          <li>
+                            <a href="" class="prev page-numbers"><i class="fa fa-angle-left icon"></i></a>
+                          </li>
+                          <li>
+                            <span class="page-numbers current">1</span>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">2</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">3</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">4</a>
+                          </li>
+                          <li>
+                            <a href="" class="next page-numbers"><i class="fa fa-angle-right icon"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="tabPanel">
+                      <div class="pcate-prd">
+                        <div class="pcate-list">
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pcate-pagi mt-50">
+                        <ul class="page-numbers">
+                          <li>
+                            <a href="" class="prev page-numbers"><i class="fa fa-angle-left icon"></i></a>
+                          </li>
+                          <li>
+                            <span class="page-numbers current">1</span>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">2</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">3</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">4</a>
+                          </li>
+                          <li>
+                            <a href="" class="next page-numbers"><i class="fa fa-angle-right icon"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="tabPanel">
+                      <div class="pcate-prd">
+                        <div class="pcate-list">
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pcate-pagi mt-50">
+                        <ul class="page-numbers">
+                          <li>
+                            <a href="" class="prev page-numbers"><i class="fa fa-angle-left icon"></i></a>
+                          </li>
+                          <li>
+                            <span class="page-numbers current">1</span>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">2</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">3</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">4</a>
+                          </li>
+                          <li>
+                            <a href="" class="next page-numbers"><i class="fa fa-angle-right icon"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="tabPanel">
+                      <div class="pcate-prd">
+                        <div class="pcate-list">
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-item pcate-item">
+                            <div class="p-img">
+                              <div class="p-box">
+                                <a href="">
+                                  <img src="assets/images/spt-img/pimg.png" alt="" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="p-desc mt-20">
+                              <a href="" class="t16 fw-6">Son nhung hoa 5g - KOLAN</a>
+                              <div class="p-bot d-flex align-center j-beweent mt-20">
+                                <div class="price t16 fw-6 c-four">
+                                  350.000đ
+                                </div>
+                                <div class="btnc">
+                                  <span class="icon">
+                                    <i class="fa-light fa-bag-shopping"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pcate-pagi mt-50">
+                        <ul class="page-numbers">
+                          <li>
+                            <a href="" class="prev page-numbers"><i class="fa fa-angle-left icon"></i></a>
+                          </li>
+                          <li>
+                            <span class="page-numbers current">1</span>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">2</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">3</a>
+                          </li>
+                          <li>
+                            <a href="" class="page-numbers">4</a>
+                          </li>
+                          <li>
+                            <a href="" class="next page-numbers"><i class="fa fa-angle-right icon"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
+  </main>
 
-    <main class="main">
-      <section class="sec-pcate sec-py">
-        <div class="sec-pcate-decor">
-            <img src="assets/images/spt-img/rose-cate.png" alt="">
-        </div>
-        <div class="container">
-          <div class="pcate">
-            <div class="pcate-wrap">
-           
-              <div class="pcate-block mt-50">
-                <div class="pcate-flex tabJS"> 
-                  <div class="pcate-fixed side-fixed pcate-left">
-               
-                    <div class="pcate-fillg">
-                      <p class="t-title mb-30">sản phẩm</p>
-                      <div class="pcate-link">
-                        <div class="tabBtn pcate-link-item"> 
-                          <div class="icon-box">
-                            <div class="icon">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="28"
-                                height="28"
-                                viewBox="0 0 28 28"
-                                fill="none"
-                              >
-                                <path
-                                  d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
-                                  fill="#2E8232"
-                                />
-                                <path
-                                  d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
-                                  fill="#2E8232"
-                                />
-                                <path
-                                  d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
-                                  fill="#2E8232"
-                                />
-                                <path
-                                  d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
-                                  fill="#2E8232"
-                                />
-                              </svg>
-                            </div>
-                          </div>
-                          <a href="3" class="text t24 fw-7">
-                            Tất cả <span class="t14 fw-4">(23)</span>
-                          </a>
-                        </div>
-                        <div class="tabBtn pcate-link-item"> 
-                            <div class="icon-box">
-                                <div class="icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="28"
-                                    height="28"
-                                    viewBox="0 0 28 28"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
-                                      fill="#2E8232"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
-                          <a href="#" class="text t24 fw-7">Trang điểm</a>
-                        </div>
-                        <div class="tabBtn pcate-link-item"> 
-                            <div class="icon-box">
-                                <div class="icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="28"
-                                    height="28"
-                                    viewBox="0 0 28 28"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
-                                      fill="#2E8232"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
-                          <a href="#" class="text t24 fw-7">Tắm & Dưỡng thể</a>
-                        </div>
-                        <div class="tabBtn pcate-link-item"> 
-                            <div class="icon-box">
-                                <div class="icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="28"
-                                    height="28"
-                                    viewBox="0 0 28 28"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M12.5453 17.1498H3.99607L13.5432 14.1672C14.1323 13.9832 14.4618 13.354 14.2778 12.7648L14.0632 12.0777C13.8868 11.5131 13.5011 11.051 12.9771 10.7765C12.4531 10.502 11.8536 10.4478 11.2891 10.6244L1.5563 13.665C0.991703 13.8414 0.529594 14.2271 0.255062 14.751C-0.0194687 15.2749 -0.0735 15.8744 0.102867 16.439L0.317516 17.1262C0.388281 17.3527 0.525328 17.5401 0.700109 17.6755C0.271031 18.0569 0 18.6124 0 19.2303V21.12C0 23.653 2.06068 25.7136 4.59359 25.7136H10.032C12.5649 25.7136 14.6256 23.6529 14.6256 21.12V19.2303C14.6257 18.0831 13.6924 17.1498 12.5453 17.1498Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M15.7656 6.98096L18.1264 20.7938H25.3212L27.6382 6.98096H15.7656Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M27.4466 3.11136C27.0031 2.58724 26.3549 2.28662 25.6683 2.28662H17.7204C17.0324 2.28662 16.3834 2.58822 15.9398 3.1141C15.4962 3.63992 15.3082 4.33051 15.4241 5.00869L15.4805 5.33873H27.9093L27.9658 5.00158C28.0794 4.32444 27.8902 3.63549 27.4466 3.11136Z"
-                                      fill="#2E8232"
-                                    />
-                                    <path
-                                      d="M18.2734 22.436V23.7937C18.2734 24.8523 19.1347 25.7136 20.1933 25.7136H23.2469C24.3055 25.7136 25.1668 24.8523 25.1668 23.7938V22.4361H18.2734V22.436Z"
-                                      fill="#2E8232"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
-                          <a href="#" class="text t24 fw-7">Bộ sản phẩm</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+  <div class="side-overlay"></div>
 
-                  <div class="pcate-right">
-                    <div class="pcate-block">
-                      <div class="pcate-heads mb-30">
-                        <p class="t40 fw-7"></p>
-                        <div class="b-group">
-                          <span class="text"> Sắp xếp theo: </span>
-                          <div class="pcate-select">
-                            <select class="re-select-main">
-                              <option selected disabled value="AL">
-                                Mới nhất
-                              </option>
-                              <option value="WY">Wyoming</option>
-                              <option value="WY">Wyoming</option>
-                              <option value="WY">Wyoming</option>
-                              <option value="WY">Wyoming</option>
-                            </select>
-                          </div>
-                        </div>
-                     
-                      </div>
+  <footer class="footer">
+    <div class="footer-wrap"></div>
+  </footer>
+  <div class="back-to-top backToTop">
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+  </div>
+  <script src="./js/library/jquery/jquery.js"></script>
+  <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/library/aos/aos.js"></script>
+  <script src="./js/library/select2/select2.min.js"></script>
+  <script src="./js/library/gallery/lightgallery-all.min.js"></script>
+  <script src="./js/library/jquery/jquery-migrate.js"></script>
+  <script src="./js/library/isotope/isotope.pkgd.min.js"></script>
+  <script src="./js/library/datetime/moment.min.js"></script>
+  <script src="./js/library/datetime/daterangepicker.min.js"></script>
+  <script src="./js/library/smoothscroll/SmoothScroll.min.js"></script>
+  <script src="./js/library/fancybox/fancybox.umd.js"></script>
 
-                      <div class="tabPanel">
-                        <div class="pcate-prd">
-                          <div class="pcate-list">
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="pcate-pagi mt-50">
-                          <ul class="page-numbers">
-                            <li>
-                              <a href="" class="prev page-numbers"
-                                ><i class="fa fa-angle-left icon"></i
-                              ></a>
-                            </li>
-                            <li>
-                              <span class="page-numbers current">1</span>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">2</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">3</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">4</a>
-                            </li>
-                            <li>
-                              <a href="" class="next page-numbers"
-                                ><i class="fa fa-angle-right icon"></i
-                              ></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tabPanel">
-                        <div class="pcate-prd">
-                          <div class="pcate-list">
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="pcate-pagi mt-50">
-                          <ul class="page-numbers">
-                            <li>
-                              <a href="" class="prev page-numbers"
-                                ><i class="fa fa-angle-left icon"></i
-                              ></a>
-                            </li>
-                            <li>
-                              <span class="page-numbers current">1</span>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">2</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">3</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">4</a>
-                            </li>
-                            <li>
-                              <a href="" class="next page-numbers"
-                                ><i class="fa fa-angle-right icon"></i
-                              ></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tabPanel">
-                        <div class="pcate-prd">
-                          <div class="pcate-list">
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="pcate-pagi mt-50">
-                          <ul class="page-numbers">
-                            <li>
-                              <a href="" class="prev page-numbers"
-                                ><i class="fa fa-angle-left icon"></i
-                              ></a>
-                            </li>
-                            <li>
-                              <span class="page-numbers current">1</span>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">2</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">3</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">4</a>
-                            </li>
-                            <li>
-                              <a href="" class="next page-numbers"
-                                ><i class="fa fa-angle-right icon"></i
-                              ></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tabPanel">
-                        <div class="pcate-prd">
-                          <div class="pcate-list">
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="p-item pcate-item">
-                              <div class="p-img">
-                                <div class="p-box">
-                                  <a href="">
-                                    <img
-                                      src="assets/images/spt-img/pimg.png"
-                                      alt=""
-                                    />
-                                  </a>
-                                </div>
-                              </div>
-                              <div class="p-desc mt-20">
-                                <a href="" class="t16 fw-6"
-                                  >Son nhung hoa 5g - KOLAN</a
-                                >
-                                <div
-                                  class="p-bot d-flex align-center j-beweent mt-20"
-                                >
-                                  <div class="price t16 fw-6 c-four">
-                                    350.000đ
-                                  </div>
-                                  <div class="btnc">
-                                    <span class="icon">
-                                      <i class="fa-light fa-bag-shopping"></i>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="pcate-pagi mt-50">
-                          <ul class="page-numbers">
-                            <li>
-                              <a href="" class="prev page-numbers"
-                                ><i class="fa fa-angle-left icon"></i
-                              ></a>
-                            </li>
-                            <li>
-                              <span class="page-numbers current">1</span>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">2</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">3</a>
-                            </li>
-                            <li>
-                              <a href="" class="page-numbers">4</a>
-                            </li>
-                            <li>
-                              <a href="" class="next page-numbers"
-                                ><i class="fa fa-angle-right icon"></i
-                              ></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                  
+  <script src="./js/main.js" type="module"></script>
+</body>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div class="side-overlay"></div>
-
-    <footer class="footer">
-      <div class="footer-wrap"></div>
-    </footer>
-    <div class="back-to-top backToTop">
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-    </div>
-    <script src="./js/library/jquery/jquery.js"></script>
-    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/library/aos/aos.js"></script>
-    <script src="./js/library/select2/select2.min.js"></script>
-    <script src="./js/library/gallery/lightgallery-all.min.js"></script>
-    <script src="./js/library/jquery/jquery-migrate.js"></script>
-    <script src="./js/library/isotope/isotope.pkgd.min.js"></script>
-    <script src="./js/library/datetime/moment.min.js"></script>
-    <script src="./js/library/datetime/daterangepicker.min.js"></script>
-    <script src="./js/library/smoothscroll/SmoothScroll.min.js"></script>
-    <script src="./js/library/fancybox/fancybox.umd.js"></script>
-
-    <script src="./js/main.js" type="module"></script>
-  </body>
 </html>
