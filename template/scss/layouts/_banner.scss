@@ -10,13 +10,34 @@
     background-size: cover;
     z-index: -1;
   }
+  &-content {
+    width: calc((7 / 12) * 100%);
+    .slogan {
+      margin: 5rem 0;
+      .slogan-inner {
+        width: 100%;
+      }
+    }
+  }
   &-title {
     @include fz-32;
     font-weight: 700;
+    @include flex;
+    line-height: 1;
+    align-items: flex-end;
+    gap: 2.5rem;
     .text {
       @include font-third;
       font-size: 8rem;
       color: $color-pri;
+      display: inline-block;
+      margin-bottom: -0.3rem;
     }
+  }
+  &-wrap {
+    padding: 6rem 0;
+  }
+  &-btn {
+    @include mid-flex;
   }
 }
