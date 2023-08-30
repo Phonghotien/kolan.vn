@@ -821,6 +821,15 @@ img {
       transition: all 0.3s ease-in-out;
     }
   }
+  &-desc {
+    a {
+      transition: all 0.3s ease-in-out;
+
+      @include hover {
+        color: $color-pri;
+      }
+    }
+  }
 }
 
 //infor account
@@ -4374,6 +4383,16 @@ img {
     }
   }
 
+  &-block {
+    .tabPanel {
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
   &-list {
     @include flex;
     margin: 0 -0.6rem;
@@ -4398,8 +4417,13 @@ img {
 
 // css for section swiper product home page
 .sproduct {
+  &-wrap {
+    width: calc(100vw - (100vw - 120rem) / 2);
+    max-width: 100%;
+  }
   &-flex {
     width: 100%;
+    display: flex;
   }
   &-left {
     width: 50%;
@@ -4505,69 +4529,7 @@ img {
     }
   }
 
-  .button-wrapper {
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    align-items: center;
 
-    @media screen and (max-width: 930px) {
-      position: relative;
-      width: 100%;
-      justify-content: space-between;
-      padding: 0 60px;
-    }
-
-
-
-    svg {
-      width: 2.5rem;
-      stroke: #fff;
-
-    }
-
-    .swiper-button {
-      border-radius: 50%;
-      width: 4.4rem;
-      height: 4.4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: $color-second;
-      background-size: 200% 100%;
-      background-position: right bottom;
-      transition: all 0.3s ease-out;
-      cursor: pointer;
-
-      & + .swiper-button {
-        margin-left: 16px;
-
-        @media screen and (max-width: 930px) {
-          margin-left: 0;
-        }
-      }
-
-      &:hover {
-        background-color: $color-pri;
-        background-position: left bottom;
-        svg {
-        }
-      }
-    }
-
-    .swiper-prev-button {
-      background:$color-second;
-      background-size: 200% 100%;
-      background-position: left bottom;
-      transition: all 0.3s ease-out;
-      svg {
-        transform: rotate(-180deg);
-      }
-      &:hover {
-        background-position: right bottom;
-      }
-    }
-  }
 
   .swiper-slide {
     opacity: 0 !important;
@@ -4611,5 +4573,22 @@ img {
   .swiper-slide-active .bottle-img {
     opacity: 1;
     transform:translateX(-50%) scale(1);
+  }
+  .sproduct-btn {
+    .sproduct-next,
+    .sproduct-prev {
+      height: 4.4rem;
+      width: 4.4rem;
+      background-color: $color-pri;
+      border-radius:50%;
+      &:after {
+        display: none;
+      }
+    }
+    .sproduct-prev {
+      svg {
+        transform:rotate(180deg);
+      }
+    }
   }
 }

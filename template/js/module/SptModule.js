@@ -287,19 +287,16 @@ export default function SptModule() {
 
 
     // js for section swiper product homepage
-    var swiperp = new Swiper(".swiperProduct", {
-      navigation: {
-        nextEl: ".swiper-next-button",
-        prevEl: ".swiper-prev-button"
-      },
+
+    var swiper = new Swiper(".swiperProduct", {
+      spaceBetween: 30,
       effect: "fade",
-      loop: "infinite",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
 
     });
-    
-    swiperp.on('slideChange', function(sld) {
-      document.body.setAttribute('data-sld', sld.realIndex);
-    })
 
   
 }
