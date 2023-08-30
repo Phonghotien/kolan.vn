@@ -287,7 +287,6 @@ export default function SptModule() {
 
 
     // js for section swiper product homepage
-
     var swiper = new Swiper(".swiperProduct", {
       spaceBetween: 30,
       effect: "fade",
@@ -296,6 +295,16 @@ export default function SptModule() {
         prevEl: ".swiper-button-prev",
       },
 
+    });
+
+    //js for best seller section
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView:"auto",
+      direction: "vertical",
+
+      pagination: {
+        el: ".swiper-pagination",
+      },
     });
 
   
