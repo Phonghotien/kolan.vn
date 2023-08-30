@@ -299,6 +299,7 @@ export default function SptModule() {
 
     //js for best seller section
     var bsllerswiper = new Swiper(".bseller-swiper", {
+      spaceBetween: 30,
 
       pagination: {
         el: ".swiper-pagination",

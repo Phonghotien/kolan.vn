@@ -555,6 +555,14 @@
     .swiper-slide-thumb-active {
       border: 0.2rem solid $color-pri;
     }
+    .swiper-slide {
+      padding-top: 100%;
+      overflow: hidden;
+
+      img {
+        @include imgCover;
+      }
+    }
   }
 
   &-btnthumb {
@@ -4031,6 +4039,16 @@
     }
   }
 }
+.gioi-thieu {
+  .vbanner {
+
+  }
+}
+.home {
+  .vbanner {
+    
+  }
+}
 
 .effect-out-box::before,
 .effect-out-box::after {
@@ -4614,9 +4632,11 @@
       transform: scale(1);
       height: 100%;
       display: flex;
+      width: 100%;
 
       img {
         object-fit: contain;
+        width: 100%;
       }
     }
     .right-side__img {
@@ -4818,6 +4838,10 @@
         .num {
           &::after {
             right: 105%;
+            @include max(800px) {
+              display: none;
+            }
+    
           }
   
         }
@@ -4852,8 +4876,7 @@
           &::after {
             left: 105%;
             @include max(800px) {
-              right: 0;
-              left: unset;
+              display: none;
   
             }
           }
@@ -4862,6 +4885,11 @@
       }
       .bseller-pro {
         left:0;
+        @include max(800px) {
+         left: unset;
+         right: 0;
+        }
+
       }
     }
     }
@@ -4890,14 +4918,25 @@
     justify-content: center;
 
     @include max(800px) {
-      display: none;
+      right: 0;
+      left: unset;
+      justify-content: flex-end;
+      width: 46%;
+      transform: none;
+      height: 70%;
+      bottom: -10%;
     }
 
     .box-p {
       width: 100%;
       height: 100%;
       display: flex;
-    align-items: end;
+      align-items: end;
+
+    
+      @include max(800px) {
+        width: auto;
+      }
 
       img {
         width: 100%;
@@ -4950,3 +4989,306 @@
   }
 
 }
+
+//css for fixed btn 
+//for icon social float bottom
+.fsocial {
+  position: fixed;
+  bottom: 12rem;
+  right: 3rem;
+  z-index: 7;
+
+  @include max(768px) {
+    right: 1.5rem;
+  }
+  transition: 0.5s linear;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 4rem;
+
+  .icon {
+    height: 4.7rem;
+    width: 4.7rem;
+    margin-top: 2rem;
+    transition:all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 1rem;
+    position: relative; 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; /* Đặt lớp ::before sau phần tử chính */
+      transition: all 0.3s ease-in-out;
+      border-radius: 50%;
+      opacity: 0;
+
+    }
+    @include hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: initial;
+    }
+    &.fb {
+      border-color: #3A559F;  
+
+      &::before {
+        background-image: linear-gradient(rgba(58, 85, 159, 1), rgba(255, 255, 255, 1));
+      }
+
+      @include hover {
+        &::before {
+          opacity: 1;
+        }
+      }                             
+    }
+    &.tt {
+      border-color: rgba(254, 44, 85, 1);
+      &::before {
+        background-image: linear-gradient(rgba(254, 44, 85, 1), rgba(37, 244, 238, 1));
+      }
+
+      @include hover {
+        &::before {
+          opacity: 1;
+        }
+      } 
+    }
+    &.shoppe {
+      border-color: #EA501F;
+      &::before {
+        background-image: linear-gradient(rgba(234, 80, 31, 1), rgba(250, 185, 164, 1));
+      }
+
+      @include hover {
+        &::before {
+          opacity: 1;
+        }
+      } 
+    }
+  }
+
+  .phone-box {
+    position: relative;
+    width: 4.7rem;
+    height: 4.7rem;
+    margin-top:2rem;
+
+    &-main {
+      position: absolute;
+      right: 0;
+      align-items: center;
+      border-radius: 3rem;
+      padding: 0.5rem;
+      background: transparent;
+      border: 0.1rem solid $color-pri;
+      transition: all 0.3s ease-in-out;
+
+      .text {
+        transition: opacity 700ms, width 700ms linear 270ms, linear 270ms;
+        opacity: 0;
+        font-size: 0;
+        color: $color-pri;
+      }
+      @include hover {
+        transition: all 400ms cubic-bezier(0.62, 0.1, 0.5, 1);
+        background: $color-second;
+
+
+        .text {
+          transition: opacity 700ms, width 1ms linear 270ms, linear 270ms;
+          opacity: 1;
+          margin: 0 1rem;
+          font-size: 1.6rem;
+          width: auto;
+        }
+        .icon-phone {
+          img,svg {
+            -webkit-animation: shake-bottom 1.5s
+              cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+            animation: shake-bottom 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+              infinite both;
+          }
+        }
+      }
+    }
+    .icon-phone {
+      display: flex;
+      position: relative;
+      margin-top: 0;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+  }
+}
+.back-to-top.kolan {
+  width: 5.5rem;
+  height: 5.5rem;
+  background: none;
+  box-shadow: none;
+  right: 2rem;
+  bottom: 4rem;
+
+  @include hover {
+    .icon {
+      -webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+      animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+    }
+
+  }
+
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  .icon {
+    z-index: 1;
+  }
+}
+
+
+
+.shake-bottom {
+  -webkit-animation: shake-bottom 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite both;
+  animation: shake-bottom 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+    both;
+}
+@-webkit-keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+@keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-8-30 16:48:44
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+ .slide-top-btt {
+	-webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+	        animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+}
+ @-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+}
+
+
