@@ -33,15 +33,15 @@ export default function SptModule() {
   //js for page pdp
   //thumb
   var tswiper = new Swiper(".tmySwiper", {
-    direction: "horizontal",
+    // direction: "horizontal",
     spaceBetween: 10,
     watchSlidesProgress: true,
-    slidesPerView: "3",
+    slidesPerView: 4,
     freeMode: true,
     breakpoints: {
       768: {
         direction: "vertical",
-        slidesPerView: "auto",
+        slidesPerView: 4,
       },
     },
     navigation: {
@@ -52,25 +52,25 @@ export default function SptModule() {
 
   // featured img
   var swiper = new Swiper(".pdpfeatureSwipper", {
-    direction: "horizontal",
-    slidesPerView: "1",
-
+    // direction: "horizontal",
+    // slidesPerView: "1",
+    // autoHeight: true,
     breakpoints: {
       768: {
-        slidesPerView: "auto",
+        // slidesPerView: "auto",
         direction: "vertical",
       },
     },
     pagination: {
       el: ".swiper-pagination",
     },
-    navigation: {
-      nextEl: ".pdp-btnthumb-next",
-      prevEl: ".pdp-btnthumb-prev",
-    },
-    thumbs: {
-      swiper: tswiper,
-    },
+    // navigation: {
+    //   nextEl: ".pdp-btnthumb-next",
+    //   prevEl: ".pdp-btnthumb-prev",
+    // },
+    // thumbs: {
+    //   swiper: tswiper,
+    // },
   });
 
   //js swiper product cart
@@ -298,12 +298,12 @@ export default function SptModule() {
     });
 
     //js for best seller section
-    var swiper = new Swiper(".bseller-swiper", {
-      slidesPerView: 3,
-      direction: "vertical",
+    var bsllerswiper = new Swiper(".bseller-swiper", {
+      spaceBetween: 30,
 
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
     });
 
