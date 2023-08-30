@@ -10,4 +10,13 @@
     background-size: cover;
     z-index: -1;
   }
+  &-title {
+    @include fz-32;
+    font-weight: 700;
+    .text {
+      @include font-third;
+      font-size: 8rem;
+      color: $color-pri;
+    }
+  }
 }
