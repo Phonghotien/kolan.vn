@@ -60,10 +60,7 @@
     }
   }
 }
-img {
-  width: 100%;
-  height: 100%;
-}
+
 .mt-50 {
   margin-top: 5rem;
 }
@@ -3986,6 +3983,8 @@ img {
 
     img {
       object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -4507,9 +4506,12 @@ img {
     }
   }
   &-left {
-    width: 50%;
+    width: 59%;
     background-color: $color-second;
-    padding: 5rem;
+    padding: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include max(1024px) {
       width: 100%;
       padding: 1.6rem;
@@ -4592,7 +4594,7 @@ img {
   .center {
     display: flex;
     position: relative;
-    width: 50%;
+    width: 41%;
     @include max(1024px) {
       width: 100%;
       max-height: 60rem;
@@ -4601,6 +4603,8 @@ img {
 
     .bottle-bg {
       object-fit: cover;
+      height: 100%;
+      width: 100%;
     }
 
     .bottle-img {
@@ -4609,6 +4613,7 @@ img {
       left: 50%;
       transform: scale(1);
       height: 100%;
+      display: flex;
 
       img {
         object-fit: contain;
@@ -4704,15 +4709,163 @@ img {
 
 // cssfor section best seller
 .bseller {
+  position: relative;
+
+  &-decor {
+    position: absolute;
+    max-width: 30%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &:nth-child(1) {
+      right: 0;
+      top: 8%;
+    }
+    &:nth-child(2) {
+      left: 0;
+      top: 40%;
+    }
+    &:nth-child(3) {
+      right:0;
+      top: 60%;
+    }
+    &:nth-child(4) {
+      left: 0;
+      top: 80%;
+    }
+  }
+  &-inner {
+    position: relative;
+  }
   &-flex {
     display: flex;
+    margin: 0 -1.2rem;
+    padding-bottom: 10%;
+
+    @include max(900px) {
+      padding-bottom: 2%;
+    }
+    @include max(800px) {
+      flex-direction: column;
+      margin-bottom:2rem;
+    }
   }
   &-left {
     width: 50%;
-    position: relative;
+    padding: 0 1.2rem;
+
+    @include max(800px) {
+      width: 100%;
+    }
   }
   &-right {
     width: 50%;
+    padding: 0 1.2rem;
+    @include max(800px) {
+      width: 100%;
+    }
+
+  }
+
+  &-slide {
+
+    .bseller-right-content {
+      width: 76%;
+      padding:3rem 0;
+
+      @include max(800px) {
+              width: 100%;
+
+      }
+
+      .num {
+        position: relative;
+
+        &::after {
+          content: "";
+          position:absolute;
+          height: 0.1rem;
+          width: 50%;
+          background-color: $color-second;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+      }
+
+      .btn {
+        margin-top: 4rem;
+
+        @include max(1024px) {
+          margin-top:2rem;
+        }
+      }
+    }
+
+    .bseller-flex {
+      
+    &:nth-child(odd){
+      .bseller-right-content {
+        margin-left:auto;
+
+        @include max(800px) {
+          margin-left: 0;
+        }
+
+        .num {
+          &::after {
+            right: 105%;
+          }
+  
+        }
+      }
+      
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        @include max(800px) {
+          flex-direction: column;
+        }
+      .bseller-right-content {
+        margin-right:auto;
+
+        *{
+          text-align: right;
+          @include max(800px) {
+            text-align: unset;
+
+          }
+        }
+
+        .btn {
+          margin-left: auto;
+          @include max(800px) {
+            margin-left: unset;
+
+          }
+        }
+        .num {
+          &::after {
+            left: 105%;
+            @include max(800px) {
+              right: 0;
+              left: unset;
+  
+            }
+          }
+  
+        }
+      }
+      .bseller-pro {
+        left:0;
+      }
+    }
+    }
+
   }
 
   &-img {
@@ -4729,12 +4882,71 @@ img {
     position: absolute;
     transform: translateX(-50%);
     left: 100%;
+    width: 52%;
     height: 100%;
-    width: 30%;
     display: flex;
-    bottom: -20%;
+    bottom: -18%;
     align-items: flex-end;
     justify-content: center;
+
+    @include max(800px) {
+      display: none;
+    }
+
+    .box-p {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    align-items: end;
+
+      img {
+        width: 100%;
+        max-height: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+  &-pagi {
+    position: absolute;
+    top: 0;
+    right: -4%;
+    height: -webkit-fill-available;
+    width: 2rem;
+
+    @include max(1400px) {
+      display: none;
+    }
+
+    .swiper-pagination  {
+      position: relative;
+      inset: 0;
+      top: 1rem;
+      display:flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      .swiper-pagination-bullet {
+        background-color: $color-pri;
+        position: relative;
+      }
+
+      .swiper-pagination-bullet-active {
+        
+        &::after {
+          position: absolute;
+          content: "";
+          height:200%;
+          width: 200%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          border: 1px solid $color-pri;
+          border-radius: 50%;
+        }
+
+
+      }
+    }
   }
 
 }

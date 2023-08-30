@@ -298,12 +298,11 @@ export default function SptModule() {
     });
 
     //js for best seller section
-    var swiper = new Swiper(".bseller-swiper", {
-      slidesPerView: 3,
-      direction: "vertical",
+    var bsllerswiper = new Swiper(".bseller-swiper", {
 
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
     });
 
