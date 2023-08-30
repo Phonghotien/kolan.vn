@@ -4291,7 +4291,9 @@ img {
   &-link {
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 4rem;
+    padding: 0 2.4rem;
+    padding-top: 3rem;
 
       @include max(1024px){
       flex-direction:row;
@@ -4299,6 +4301,8 @@ img {
       column-gap: 2rem;
       margin-bottom: 2rem;
       align-items: center;
+      padding: 0;
+
       }
 
       @include max(600px) {
@@ -4310,9 +4314,11 @@ img {
       display: flex;
       flex-direction: column;
       column-gap: 1rem;
+      position: relative;
 
       @include max(1024px){
         transition: all 0.3s ease-in-out;
+        padding: 1rem 0;
         .icon-box {
           margin: 0 auto;
         }
@@ -4346,7 +4352,7 @@ img {
             font-size: 2rem;
           }
           @include max(768px) {
-            font-size:1.5rem;
+            font-size:1.7rem;
           }
         }
       }
@@ -4360,6 +4366,12 @@ img {
     .icon-box {
       width: 2.8rem;
       height: 2.8rem;
+      @include min(1024px){
+        position: absolute;
+        left:0;
+        bottom: 100%;
+      }
+
 
       .icon {
         opacity: 0;
