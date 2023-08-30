@@ -3,6 +3,7 @@
   padding-bottom: 8rem;
   background: #c0dc8f;
   position: relative;
+  z-index: 1;
   @include max(1050px) {
     padding: 6rem 0;
   }
@@ -14,6 +15,7 @@
     background-size: cover;
     mix-blend-mode: multiply;
     background-repeat: no-repeat;
+    z-index: -1;
   }
   &-flex {
     @include flex;
