@@ -680,6 +680,12 @@
         }
       }
     }
+    .swiper {
+      .swiper-slide  {
+        height: auto !important;
+      }
+    }
+
   }
 
   &-desc {
@@ -3964,11 +3970,7 @@
   &-wrap {
     position: relative;
     overflow: hidden;
-    height: 70rem;
 
-    @include max(1024px) {
-      height: 50rem;
-    }
 
     &::before {
       content: "";
@@ -3986,8 +3988,7 @@
     }
   }
   &-bg {
-    position: absolute;
-    inset: 0;
+
 
     img {
       object-fit: cover;
@@ -3996,7 +3997,15 @@
     }
   }
 
+  &-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+  }
+
   &-content {
+    margin-top: 3rem;
     z-index: 2;
     position: relative;
     height: 100%;
@@ -4041,12 +4050,32 @@
 }
 .gioi-thieu {
   .vbanner {
+    .vbanner-bg {
+      .box {
+        width: 100%;height: 100%;
+        position: relative;
+        padding-top: calc((700 / 1728) * 100%);
 
+        img {
+          @include imgCover;
+        }
+      }
+    }
   }
 }
 .home {
   .vbanner {
-    
+    .vbanner-bg {
+      .box {
+        width: 100%;height: 100%;
+        position: relative;
+        padding-top: calc((534 / 1728) * 100%);
+
+        img {
+          @include imgCover;
+        }
+      }
+    }
   }
 }
 
