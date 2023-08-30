@@ -559,6 +559,10 @@
       padding-top: 100%;
       overflow: hidden;
 
+      @include max (768px) {
+        padding-top:35%;
+      }
+
       img {
         @include imgCover;
       }
@@ -683,6 +687,10 @@
     .swiper {
       .swiper-slide  {
         height: auto !important;
+
+        img {
+          width: 100%;
+        }
       }
     }
 
