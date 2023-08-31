@@ -279,6 +279,7 @@ export default function SptModule() {
   // js for section swiper product homepage
   var swiper = new Swiper(".swiperProduct", {
     spaceBetween: 30,
+    speed: 1300,
     effect: "fade",
     navigation: {
       nextEl: ".swiper-button-next",
