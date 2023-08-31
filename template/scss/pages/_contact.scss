@@ -88,6 +88,10 @@
       @include flex;
       flex-direction: column;
       height: 100%;
+      row-gap: 2rem;
+      @include max(768px) {
+        row-gap: 1.2rem;
+      }
     }
     .p-desc {
       @include flex;
@@ -104,6 +108,49 @@
   &.page-search {
     .pcate-right {
       width: 100%;
+    }
+  }
+}
+.sproduct {
+  .swiper {
+    .swiper-slide {
+      height: auto;
+    }
+  }
+  .center {
+    text-align: center;
+  }
+  .sproduct-left {
+    @include max(500px) {
+      padding: 2.4rem 1.5rem;
+    }
+  }
+  .sproduct-btn {
+    @include max(500px) {
+      top: 50vw;
+    }
+  }
+}
+.reproduct-ctn {
+  .p-inner {
+    @include flex;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 2rem;
+    @include max(768px) {
+      row-gap: 1.2rem;
+    }
+    .p-img {
+      overflow: unset;
+    }
+    .p-desc {
+      @include flex;
+      flex-direction: column;
+      height: 100%;
+      .mt-20 {
+        padding-top: 2rem;
+        margin-top: auto;
+      }
     }
   }
 }

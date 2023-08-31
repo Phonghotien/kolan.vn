@@ -7,6 +7,9 @@
   width: 100%;
   transition: 0.3s ease-in-out;
   z-index: 50;
+  @include max(1200px) {
+    border-bottom: 0;
+  }
   &::before {
     content: "";
     position: absolute;

@@ -311,7 +311,7 @@
 }
 .pdp-thumb-content {
   position: sticky !important;
-  top: calc(var(--size-hd) + 5rem);
+  top: var(--size-hd-sticky);
 }
 .listcate-slider .cateSlider {
   max-height: 30.2rem;

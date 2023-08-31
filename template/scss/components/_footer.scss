@@ -72,6 +72,11 @@
     @include max(1200px) {
       width: 100%;
     }
+    @include max(500px) {
+      @include mid-flex;
+      flex-direction: column;
+      text-align: center;
+    }
     .i-list {
       @include flex;
       gap: 0.8rem;
