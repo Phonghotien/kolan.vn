@@ -298,10 +298,18 @@ export default function SptModule() {
   });
 
   //js for btn slide up social footer
+
   const fsocial_btn = $(".fixedbar-btn");
+
+  const sideUp = () => {
+    if (fsocial_btn) {
+      fsocial_btn.prev().slideUp(600);
+    }
+  };
   if (fsocial_btn) {
     fsocial_btn.on("click", function () {
-      $(this).prev().slideToggle(500);
+      $(this).prev().slideToggle(600);
     });
   }
+  setTimeout(sideUp, 8000);
 }
