@@ -4287,7 +4287,9 @@
         .box {
           position: relative;
           overflow: hidden;
-          padding-top: calc((472 / 648) * 100%);
+          // padding-top: calc((487 / 648) * 100%);
+          padding-top: calc((384 / 648) * 100%);
+          height: 100%;
 
           img {
             @include imgCover;
@@ -4304,7 +4306,9 @@
         .box {
           position: relative;
           overflow: hidden;
-          padding-top: calc((472 / 648) * 100%);
+          // padding-top: calc((487 / 648) * 100%);
+          padding-top: calc((384 / 648) * 100%);
+          height: 100%;
 
           img {
             @include imgCover;
@@ -5249,6 +5253,14 @@
         }
       } 
     }
+    &.phone {
+      border-color:  $color-pri;
+
+      @include hover {
+        border: transparent;
+      }
+
+    }
   }
 
   .phone-box {
@@ -5265,7 +5277,7 @@
       border-radius: 3rem;
       padding: 0.5rem;
       background: transparent;
-      border: 0.1rem solid $color-pri;
+      // border: 0.1rem solid $color-pri;
       transition: all 0.3s ease-in-out;
 
       .text {
