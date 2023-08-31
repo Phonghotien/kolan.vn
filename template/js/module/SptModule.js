@@ -164,6 +164,8 @@ export default function SptModule() {
     freeMode: true,
     watchSlidesProgress: true,
     centeredSlides: true,
+    allowTouchMove: false,
+
     breakpoints: {
       // 600: {
       //   slidesPerView: 3,
@@ -293,4 +295,12 @@ export default function SptModule() {
       clickable: true,
     },
   });
+
+  //js for btn slide up social footer
+  const fsocial_btn = $(".fixedbar-btn");
+  if (fsocial_btn) {
+    fsocial_btn.on("click", function () {
+      $(this).prev().slideToggle(500);
+    });
+  }
 }
