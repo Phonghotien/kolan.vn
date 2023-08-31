@@ -3540,7 +3540,7 @@
         line-height: 1.2;
       }
       @include max(768px) {
-        font-size: 12rem;
+        font-size: 8rem;
         line-height: 1.2;
       }
     }
@@ -4233,6 +4233,10 @@
   padding: 4rem 0;
   background-color: $color-second;
 
+  @include max(600px) {
+    padding: 1rem 0;
+  }
+
   &-inner {
     .swiper-wrapper {
       align-items: center;
@@ -4725,6 +4729,7 @@
     @include max(1024px) {
       flex-direction: column-reverse;
       row-gap: 1rem;
+      height: auto;
     }
   }
   &-left {
@@ -4819,6 +4824,7 @@
     @include max(1024px) {
       width: 100%;
       max-height: 60rem;
+      text-align: center;
     }
 
     .bottle-bg {
@@ -4886,6 +4892,10 @@
       &:after {
         display: none;
       }
+      @include max (1200px) {
+        width: 3.4rem;
+        height: 3.4rem;
+      }
     }
     .sproduct-prev {
       svg {
@@ -4894,13 +4904,18 @@
     }
 
     @include max(1200px) {
-      position: relative;
+      position: absolute;
       height: 4.4rem;
       display: flex;
-      justify-content: center;
       flex-direction: row-reverse;
       column-gap: 2rem;
-      margin-top: 2rem;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 3;
+      justify-content: space-between;
+      padding: 0 1.5rem;
 
       .sproduct-next,
       .sproduct-prev {
