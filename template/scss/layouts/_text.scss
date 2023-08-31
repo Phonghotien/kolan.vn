@@ -3,8 +3,15 @@
   @include font-second;
   font-weight: 600;
   text-transform: uppercase;
+  @include max(500px) {
+    font-size: 2.4rem;
+  }
 }
-
+.mt-50 {
+  @include max(500px) {
+    margin-top: 2.4rem !important;
+  }
+}
 .t-title-second {
   @include fz-24;
 }

@@ -40,10 +40,11 @@ window.addEventListener("DOMContentLoaded", () => {
   PlusMinusModule();
   // Select
   Select2Module();
-  // CountUP
-  CountUpModule();
+
   // Component
   SwiperModule();
+  // CountUP
+  CountUpModule();
   MobileModule();
   BtnToTopModule();
   HeaderModule();

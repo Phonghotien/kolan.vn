@@ -16,8 +16,16 @@
   &-content {
     width: calc((7 / 12) * 100%);
     padding: 0 1.2rem;
+    @include max(1250px) {
+      width: 72rem;
+      max-width: 100%;
+    }
     .slogan {
       margin: 5rem 0;
+      @include max(600px) {
+        margin-top: 2.4rem;
+        margin-bottom: 0;
+      }
       .slogan-inner {
         width: 100%;
       }
@@ -30,6 +38,14 @@
     line-height: 1;
     align-items: flex-end;
     gap: 2.5rem;
+    clip-path: inset(0 100% 0 0);
+    transition: 1.75s ease-in-out;
+
+    @include max(600px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .text {
       @include font-third;
       font-size: 8rem;
@@ -40,13 +56,24 @@
   }
   &-wrap {
     padding: 8rem 0;
+    @include max(600px) {
+      padding: 4rem 0;
+    }
   }
   &-btn {
     @include mid-flex;
+    @include max(600px) {
+      margin-bottom: 2.4rem;
+    }
   }
   &-gr {
     @include flex;
     margin: 0 -1.2rem;
+    @include max(1230px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &-main {
     .swiper {
@@ -60,6 +87,9 @@
           .bn-img {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           }
+          .bn-title {
+            clip-path: inset(0 0 0 0);
+          }
         }
       }
     }
@@ -67,6 +97,10 @@
   &-img {
     width: calc((5 / 12) * 100%);
     padding: 0 1.2rem;
+    @include max(1250px) {
+      width: 72rem;
+      max-width: 100%;
+    }
     &-inner {
       position: relative;
       top: 16%;
@@ -82,7 +116,7 @@
   }
   &-slider {
     .swiper {
-      overflow: unset;
+      // overflow: unset;
       .swiper-slide {
         height: auto;
       }
@@ -152,6 +186,12 @@
 .bn-page {
   padding: 8rem 0;
   position: relative;
+  @include max(900px) {
+    padding: 4rem 0;
+  }
+  .breadcrumb {
+    margin-top: unset;
+  }
   &-flex {
     @include flex;
     margin: 0 -1.2rem;
@@ -160,6 +200,7 @@
   &-left {
     width: max-content;
     padding: 0 1.2rem;
+    flex-shrink: 0;
   }
   &-right {
     width: fit-content;
@@ -175,12 +216,18 @@
   &-ctn {
     position: relative;
     top: 6rem;
+    @include max(600px) {
+      top: unset;
+    }
   }
   &-title {
     @include font-third;
     font-size: 8rem;
     font-weight: 700;
     color: $color-pri;
+    @include max(900px) {
+      font-size: 8vw;
+    }
   }
   &-dcor {
     position: absolute;
@@ -192,5 +239,159 @@
       display: block;
       width: 100%;
     }
+  }
+}
+.pcate-link-item {
+  @include max(1024px) {
+    flex-direction: row !important;
+    padding: 1rem 1.2rem !important;
+    align-items: center !important;
+    border-radius: 1.2rem !important;
+    transition: 0.3s ease-in-out !important;
+    .icon-box {
+      position: static !important;
+      margin: unset !important;
+      .icon {
+        opacity: 1 !important;
+      }
+    }
+    .text {
+      font-weight: 500;
+      transition: 0.3s ease-in-out !important;
+      padding: unset !important;
+      @include max(600px) {
+        font-size: 1.4rem !important;
+      }
+    }
+    &.active {
+      background: #fff !important;
+    }
+  }
+  .text {
+    font-size: 2.4rem !important;
+  }
+}
+.pcate-link {
+  @include max(1024px) {
+    row-gap: 1.2rem !important;
+  }
+}
+.pdp-thumb {
+  .swiper {
+    .swiper-slide {
+      padding-top: unset;
+      height: 9.2rem !important;
+      @include max(768px) {
+        height: auto !important;
+      }
+      .inner {
+        a {
+          @include mid-flex;
+          padding-top: 100%;
+          position: relative;
+          @include max(769px) {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+.pdp-thumb-ctn {
+  position: static !important;
+}
+.pdp-thumb-content {
+  position: sticky !important;
+  top: calc(var(--size-hd) + 5rem);
+}
+.listcate-slider .cateSlider {
+  max-height: 30.2rem;
+
+  @include max(768px) {
+    max-height: unset;
+  }
+}
+.listcate-slider {
+  .pdp-thumb {
+    @include max(1024px) {
+      display: block;
+      flex-shrink: 0;
+    }
+  }
+  .pdp-desc-flex {
+    @include max(1100px) {
+      flex-direction: column;
+      .quantity {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+  .pdp-desc {
+    @include max(768px) {
+      margin-top: 2.4rem;
+    }
+  }
+}
+
+.listcate-slider .cateSlider2 {
+  max-height: 159rem;
+}
+.hv-item {
+  position: relative;
+  overflow: hidden;
+  @include hover {
+    &::before {
+      -webkit-animation: shine 1.25s;
+      animation: shine 1.25s;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+.bseller-img {
+  .inner {
+    position: relative;
+  }
+  .bseller-pro {
+    z-index: 2;
+  }
+}
+.pdp-main {
+  .sec-py {
+    padding-bottom: 0;
   }
 }

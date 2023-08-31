@@ -9,6 +9,7 @@
 @import url("../js/library/fancybox/fancybox.css");
 @import url("../js/library/datetime/daterangepicker.css");
 // Core
+
 @import "./core/reset";
 @import "./core/mona";
 @import "./core/variable";
@@ -45,9 +46,9 @@
 @import "./layouts/side";
 @import "./layouts/mxh";
 // Pages
+@import "./pages/spt";
 @import "./pages/home";
 @import "./pages/contact";
 @import "./pages/about";
 @import "./pages/news";
 @import "./pages/blog";
-@import "./pages/spt";
