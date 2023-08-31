@@ -5235,7 +5235,7 @@
       // transform: scale(1.1);
 
       .icon-phone {
-        padding-bottom:1rem ;
+        padding-bottom:1.2rem ;
       }
     }
 
@@ -5258,6 +5258,7 @@
         &::before {
           opacity: 1;
         }
+          transform: scale(1.1);
       }
     }
     &.tt {
@@ -5273,6 +5274,8 @@
         &::before {
           opacity: 1;
         }
+        transform: scale(1.1);
+
       }
     }
     &.shoppe {
@@ -5288,6 +5291,8 @@
         &::before {
           opacity: 1;
         }
+        transform: scale(1.1);
+
       }
     }
     &.phone {
@@ -5313,7 +5318,6 @@
       border-radius: 3rem;
       padding: 0.5rem;
       background: transparent;
-      // border: 0.1rem solid $color-pri;
       transition: all 0.3s ease-in-out;
 
       .text {
@@ -5351,7 +5355,7 @@
       border-radius: 50%;
       border: none;
       padding: 0;
-      width: 3.7rem;
+      width: 3.3rem;
       height: 3.7rem;
       padding: 0.5rem;
 
