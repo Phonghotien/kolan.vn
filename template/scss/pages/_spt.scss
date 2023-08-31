@@ -2539,6 +2539,7 @@
         .radio-label {
           width: 1.4rem;
           height: 1.4rem;
+          aspect-ratio: 1;
           transition: 0.4s ease-in-out;
           border-radius: 50%;
           border: 0.1rem solid $color-second;
@@ -4105,6 +4106,7 @@
         color: white;
         font-size: 2.6rem;
         transition: all 0.3s ease;
+        padding-top: 0.5rem;
       }
 
       @include hover {
@@ -4905,7 +4907,7 @@
 
     @include max(1200px) {
       position: absolute;
-      height: 4.4rem;
+      height: 3.4rem;
       display: flex;
       flex-direction: row-reverse;
       column-gap: 2rem;
@@ -5230,7 +5232,11 @@
       opacity: 0;
     }
     @include hover {
-      transform: scale(1.1);
+      // transform: scale(1.1);
+
+      .icon-phone {
+        padding-bottom:1rem ;
+      }
     }
 
     img {
@@ -5355,15 +5361,15 @@
 }
 
 .back-to-top.kolan {
-  width: 5.2rem;
-  height: 5.2rem;
+  width: 5rem;
+  height: 5rem;
   background: none;
   box-shadow: none;
-  right: 2.7rem;
+  right: 2.9rem;
   bottom: 4rem;
 
   @include max(768px) {
-    right: 1rem;
+    right: 1.4rem;
   }
 
   @include hover {
@@ -5419,6 +5425,7 @@
     font-size: 1.9rem;
     -webkit-animation: wobble-hor-bottom 1.5s infinite both;
     animation: wobble-hor-bottom 1.5s infinite both;
+    margin-top: 0.2rem;
   }
 }
 
