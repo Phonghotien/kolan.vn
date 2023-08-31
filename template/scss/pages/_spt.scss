@@ -5007,6 +5007,10 @@
         @include max(1024px) {
           margin-top: 2rem;
         }
+        @include max(800px) {
+          margin: 0 auto;
+          margin-top:1rem;
+        }
       }
     }
 
