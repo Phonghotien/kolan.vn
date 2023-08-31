@@ -5051,9 +5051,9 @@
 
           .btn {
             margin-left: auto;
-            @include max(800px) {
-              margin-left: unset;
-            }
+            // @include max(800px) {
+            //   margin-left: unset;
+            // }
           }
           .num {
             &::after {
