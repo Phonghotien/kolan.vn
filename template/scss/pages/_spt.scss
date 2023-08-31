@@ -1746,32 +1746,33 @@
       margin: 0 2.5rem;
       margin-top: 3rem;
 
-      @include max(1024px) {
-        margin: 0rem;
-        margin-top: 2.4rem;
-        flex-wrap: wrap;
-        row-gap: 2rem;
-        justify-content: center;
-        column-gap: 3rem;
-      }
+      // @include max(1024px) {
+      //   margin: 0rem;
+      //   margin-top: 2.4rem;
+      //   flex-wrap: wrap;
+      //   row-gap: 2rem;
+      //   justify-content: center;
+      //   column-gap: 3rem;
+      // }
 
-      @include max(500px) {
-        column-gap: 1rem;
-      }
+      // @include max(500px) {
+      //   column-gap: 1rem;
+      // }
+
     }
     &-step {
       width: calc((100% / 5));
 
-      @include max(1024px) {
-        width: 16%;
-        border-radius: 50%;
-      }
-      @include max(650px) {
-        width: 28%;
-      }
-      @include max(400px) {
-        width: 30%;
-      }
+      // @include max(1024px) {
+      //   width: 16%;
+      //   border-radius: 50%;
+      // }
+      // @include max(650px) {
+      //   width: 28%;
+      // }
+      // @include max(400px) {
+      //   width: 30%;
+      // }
 
       &.step-pass {
         .cstep-odt-icon {
@@ -1814,17 +1815,17 @@
             width: 50%;
             border-radius: 5rem;
 
-            @include max(1024px) {
-              width: 70%;
-              display: none;
-            }
+            // @include max(1024px) {
+            //   width: 70%;
+            //   display: none;
+            // }
           }
           &:before {
             border-radius: 5rem;
 
-            @include max(1024px) {
-              border-radius: 50%;
-            }
+            // @include max(1024px) {
+            //   border-radius: 50%;
+            // }
           }
         }
       }
@@ -1845,37 +1846,37 @@
             width: 50%;
             border-radius: 5rem;
             background-color: rgb(235, 232, 232);
-            @include max(1024px) {
-              width: 70%;
-              display: none;
-            }
+            // @include max(1024px) {
+            //   width: 70%;
+            //   display: none;
+            // }
           }
           &:before {
             border-top-right-radius: 5rem;
             border-bottom-right-radius: 5rem;
 
-            @include max(1024px) {
-              border-radius: 50%;
-            }
+            // @include max(1024px) {
+            //   border-radius: 50%;
+            // }
           }
         }
       }
 
       &.active {
-        @include max(1024px) {
-          animation: pulse 2s ease-out infinite;
+        // @include max(1024px) {
+        //   animation: pulse 2s ease-out infinite;
 
-          &::after {
-            content: "";
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-            border-radius: 50%;
-            position: absolute;
-          }
-        }
+        //   &::after {
+        //     content: "";
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     z-index: 1;
+        //     border-radius: 50%;
+        //     position: absolute;
+        //   }
+        // }
         .cstep-odt-icon {
           background: transparent;
 
@@ -1896,9 +1897,9 @@
       flex-direction: column;
       gap: 2rem;
       margin: 0 -2.5rem;
-      @include max(1024px) {
-        margin: 0rem;
-      }
+      // @include max(1024px) {
+      //   margin: 0rem;
+      // }
     }
     &-icon {
       width: 100%;
@@ -1909,11 +1910,11 @@
       flex-direction: column;
       row-gap: 0.5rem;
 
-      @include max(1024px) {
-        height: auto;
-        aspect-ratio: 1;
-        padding: 1rem !important;
-      }
+      // @include max(1024px) {
+      //   height: auto;
+      //   aspect-ratio: 1;
+      //   padding: 1rem !important;
+      // }
 
       &::before {
         content: "";
@@ -1925,10 +1926,10 @@
         clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
         z-index: 0; /* Đặt z-index âm để nó nằm phía dưới phần tử chính */
 
-        @include max(1024px) {
-          clip-path: none;
-          border-radius: 50%;
-        }
+        // @include max(1024px) {
+        //   clip-path: none;
+        //   border-radius: 50%;
+        // }
       }
       .text {
         z-index: 1;
