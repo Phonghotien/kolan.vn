@@ -78,6 +78,8 @@
   &-wr {
     padding-bottom: 6rem;
     position: relative;
+    @include flex;
+    flex-direction: column;
     .header-search {
       display: block;
       padding: 1.2rem;
@@ -204,6 +206,7 @@
   }
   &-if {
     padding: 1.2rem;
+    order: 2;
     &-list {
       @include flex;
       flex-direction: column;
@@ -215,13 +218,22 @@
       gap: 0.8rem;
       .icon {
         @include mid-flex;
-        width: 2.4rem;
+        width: 1.8rem;
         flex-shrink: 0;
       }
       .text {
         font-size: 1.5rem;
         color: $color-text;
       }
+    }
+  }
+  .mb-slogan {
+    padding: 1.2rem;
+    text-align: center;
+    order: 1;
+    .tp-decor {
+      color: $color-pri;
+      font-weight: 600;
     }
   }
 }
