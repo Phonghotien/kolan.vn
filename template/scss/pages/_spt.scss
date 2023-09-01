@@ -5256,7 +5256,7 @@
 
       @include hover {
         &::before {
-          opacity: 1;
+          opacity: 1; 
         }
           transform: scale(1.1);
       }
